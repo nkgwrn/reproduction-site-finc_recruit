@@ -42,6 +42,20 @@ $(function () {
       $(this).children().addClass("is-open");
     }
   });
+
+  $(".js-menu").on("click", function () {
+    $(this).toggleClass("on");
+    if ($(".l-gnav").hasClass("on")) {
+      //fullnavが開いている時
+      $(".l-gnav").removeClass("on").fadeOut();
+    } else {
+      //fullnavが閉じている時
+      $(".l-gnav").fadeIn();
+      setTimeout(function () {
+        $(".l-gnav").addClass("on");
+      }, 200);
+    }
+  });
 });
 
 $(window).scroll(function () {

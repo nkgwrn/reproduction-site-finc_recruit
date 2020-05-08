@@ -315,6 +315,109 @@ $color-gray: #bcbec0;
 }
 
 /***********
+* nav
+************/
+/*transition & delay*/
+.transition10 {
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.delay01 {
+  transition-delay: 0.1s;
+}
+.delay02 {
+  transition-delay: 0.2s;
+}
+.delay03 {
+  transition-delay: 0.3s;
+}
+.delay04 {
+  transition-delay: 0.4s;
+}
+.delay05 {
+  transition-delay: 0.5s;
+}
+.delay06 {
+  transition-delay: 0.6s;
+}
+.delay07 {
+  transition-delay: 0.7s;
+}
+.delay08 {
+  transition-delay: 0.8s;
+}
+.delay09 {
+  transition-delay: 0.9s;
+}
+.delay10 {
+  transition-delay: 1s;
+}
+.delay11 {
+  transition-delay: 1.1s;
+}
+
+.l-gnav {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+
+  &-right {
+    align-items: center;
+    background: #fff;
+    display: flex;
+    height: 100%;
+    right: 0;
+    // opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+  }
+
+  &-body {
+    padding-left: 60px;
+    &__list {
+      &--item {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 20px 0;
+        opacity: 0;
+      }
+    }
+  }
+
+  &-left {
+    align-items: center;
+    background: #000;
+    color: #fff;
+    display: flex;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.l-gnav.on {
+  .l-gnav-right {
+    opacity: 1;
+    width: 360px;
+  }
+
+  .l-gnav-body__list--item {
+    opacity: 1;
+  }
+
+  .l-gnav-left {
+    opacity: 1;
+    width: calc(100% - 360px);
+  }
+}
+
+/***********
 * main
 ************/
 .l-main {
