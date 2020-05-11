@@ -88,7 +88,7 @@ li {
 
 .fadein05 {
   opacity: 0;
-  top: 50px;
+  transform: translate(0, 50px);
   transition: all 500ms ease-in-out;
 }
 
@@ -115,11 +115,7 @@ li {
 
 .fadein05.scrollin {
   opacity: 1;
-  top: 0px;
-}
-
-.fadein05.scrollin + .fadein05.scrollin {
-  top: 20px;
+  transform: translate(0, 0px);
 }
 
 .c-ttl {
@@ -130,11 +126,14 @@ li {
 .c-ttl__txt {
   letter-spacing: 0.03em;
   font-size: 64px;
+  margin-bottom: -10px;
 }
 
 .c-ttl__sub {
-  margin-top: 35px;
+  margin-top: 25px;
   font-size: 20px;
+  letter-spacing: 0.1em;
+  margin-bottom: -5px;
 }
 
 .c-ttl__pink {
@@ -167,8 +166,13 @@ li {
 }
 
 .c-panel-body {
-  margin-top: 70px;
+  margin-top: 60px;
   line-height: 2;
+  letter-spacing: 0.02em;
+}
+
+.p-experience .c-panel-body {
+  margin-top: 45px;
 }
 
 .p-box-center .c-panel-body {
@@ -198,6 +202,7 @@ li {
 
 .c-btn-wrapper__feature {
   margin-top: 60px;
+  margin-left: 0;
 }
 
 .c-btn {
@@ -488,6 +493,10 @@ li {
   text-align: center;
 }
 
+.p-value {
+  margin-bottom: 250px;
+}
+
 .p-value-inner {
   padding-left: 22%;
   margin-top: 60px;
@@ -543,18 +552,26 @@ li {
   margin-top: 30px;
 }
 
-.p-value-body__bg:before {
-  content: "";
+.p-value-body__bg {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 1;
   background-image: url(/image/img_recruiting_statement.jpg);
   background-size: 125%;
   background-position: top 43% right 49%;
   background-repeat: no-repeat;
+}
+
+.p-value-body__gray {
+  width: 100%;
+  height: 200px;
+  background: #f9f9f9;
+  position: absolute;
+  top: -65px;
+  z-index: -1;
 }
 
 .p-value-side {
@@ -562,7 +579,7 @@ li {
   top: 0;
   left: 0;
   width: 23%;
-  height: 82vh;
+  height: 100%;
   margin-top: -60px;
   margin-left: -0.4%;
 }
@@ -583,14 +600,11 @@ li {
   height: 100%;
 }
 
-.p-lead {
-  padding-bottom: 60px;
-}
-
 .p-lead__img {
   position: relative;
   padding-bottom: 90px;
-  margin-top: 130px;
+  margin-top: 150px;
+  z-index: 5;
 }
 
 .p-lead__img .p-lead-img__left {
@@ -631,6 +645,50 @@ li {
   background: #fff;
 }
 
+.p-mission-inner {
+  position: relative;
+}
+
+.p-mission-side {
+  position: relative;
+  z-index: -1;
+}
+
+.p-mission-side__item {
+  position: absolute;
+  display: flex;
+  z-index: 3;
+  align-items: flex-start;
+}
+
+.p-mission-side__left {
+  left: -80px;
+}
+
+.p-mission-side__left--item {
+  top: 600px;
+  left: -120px;
+}
+
+.p-mission-side__left--item:nth-child(2) {
+  top: -150px;
+  left: 0px;
+}
+
+.p-mission-side__right {
+  right: -65px;
+}
+
+.p-mission-side__right--item {
+  right: 0;
+  top: 800px;
+}
+
+.p-mission-side__right--item:nth-child(2) {
+  right: -133px;
+  top: 100px;
+}
+
 .p-feature {
   position: relative;
 }
@@ -669,6 +727,7 @@ li {
 .p-feature-team__txt {
   margin-right: 0;
   margin-left: auto;
+  padding-top: 120px;
 }
 
 .p-feature-team__img {
@@ -688,7 +747,8 @@ li {
 .p-experience .p-card {
   display: flex;
   padding-left: 180px;
-  padding-top: 90px;
+  padding-top: 65px;
+  align-items: flex-start;
 }
 
 .p-experience .p-card__item {
@@ -697,6 +757,7 @@ li {
 }
 
 .p-experience .p-card__item:nth-child(2) {
+  margin-top: 150px;
   margin-left: 50px;
 }
 
@@ -710,7 +771,6 @@ li {
 
 .p-experience-list {
   display: block;
-  overflow: hidden;
 }
 
 .p-experience-list img {
@@ -757,8 +817,8 @@ li {
 }
 
 .p-jobs-wrapper {
-  padding-left: 150px;
-  padding-bottom: 90px;
+  padding-left: 160px;
+  padding-bottom: 100px;
   background: #fff;
   width: 100vw;
   margin-bottom: -150px;
