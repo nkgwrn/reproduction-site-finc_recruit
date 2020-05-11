@@ -48,12 +48,16 @@ $(function () {
     if ($(".l-gnav").hasClass("on")) {
       //fullnavが開いている時
       $(".l-gnav").removeClass("on").fadeOut();
+      $(".l-btn-open").addClass("on");
+      $(".l-btn-close").removeClass("on");
     } else {
       //fullnavが閉じている時
       $(".l-gnav").fadeIn();
       setTimeout(function () {
         $(".l-gnav").addClass("on");
       }, 200);
+      $(".l-btn-close").addClass("on");
+      $(".l-btn-open").removeClass("on");
     }
   });
 });
