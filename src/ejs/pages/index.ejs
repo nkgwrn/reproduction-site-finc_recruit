@@ -2,36 +2,8 @@
 <html lang="ja">
   <%- include('../components/_head'); %>
   <body>
-    <%- include('../components/_header'); %>
-    <div class="l-gnav">
-      <div class="l-gnav-left transition10">
-        <div>aaa</div>
-      </div>
-      <div class="l-gnav-right transition10">
-        <nav class="l-gnav-body">
-          <ul class="l-gnav-body__list">
-            <li class="l-gnav-body__list--item transition10 delay01">
-              <a href="">Message</a>
-            </li>
-            <li class="l-gnav-body__list--item transition10 delay02">
-              <a href="">Jobs</a>
-            </li>
-            <li class="l-gnav-body__list--item transition10 delay03">
-              <a href="">Business</a>
-            </li>
-            <li class="l-gnav-body__list--item transition10 delay04">
-              <a href="">Team</a>
-            </li>
-            <li class="l-gnav-body__list--item transition10 delay05">
-              <a href="">Experience</a>
-            </li>
-            <li class="l-gnav-body__list--item transition10 delay06">
-              <a href="">Corporate</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+    <%- include('../components/_header'); %> <%- include('../components/_gnav');
+    %>
     <div class="wrapper" id="luxy">
       <main class="l-main">
         <section class="p-value">
@@ -69,7 +41,7 @@
               </h1>
             </div>
             <div class="p-value-body">
-              <div class="p-value-body__box">
+              <div class="p-value-body__box luxy-el" data-speed-y="3">
                 <h2 class="p-value-body__heading">Recruiting Statement</h2>
                 <p class="p-value-body__txt">
                   FiNC
@@ -85,7 +57,8 @@
                   日本だけでなく遠く離れた世界中の人々にココロとカラダの健康を届けます。
                 </p>
               </div>
-              <div class="p-value-body__bg"></div>
+              <div class="p-value-body__bg luxy-el" data-speed-y="3"></div>
+              <div class="p-value-body__gray luxy-el" data-speed-y="1"></div>
             </div>
             <div class="p-value-side">
               <div class="p-value-side__cover luxy-el" data-speed-y="-18">
@@ -118,17 +91,51 @@
           </div>
           <div></div>
         </section>
-        <section class="c-panel p-box-center">
+        <section class="c-panel p-box-center p-mission">
           <div class="c-container">
-            <h2 class="c-panel-head">
-              <span class="c-ttl__pink">Mission</span>
-              <span class="c-ttl__txt">すべての人にパーソナルAIを</span>
-            </h2>
-            <p class="c-panel-body">
-              AI（人工知能）を活用して、歩数・体重・睡眠・食事等の生活習慣やお悩みを<br />
-              分析し、お客様一人ひとりに最適なアドバイスを提案することで、<br />
-              ココロとカラダの健康の実現をサポートします。
-            </p>
+            <div class="p-mission-inner">
+              <h2 class="c-panel-head">
+                <span class="c-ttl__pink">Mission</span>
+                <span class="c-ttl__txt">すべての人にパーソナルAIを</span>
+              </h2>
+              <p class="c-panel-body">
+                AI（人工知能）を活用して、歩数・体重・睡眠・食事等の生活習慣やお悩みを<br />
+                分析し、お客様一人ひとりに最適なアドバイスを提案することで、<br />
+                ココロとカラダの健康の実現をサポートします。
+              </p>
+              <div class="p-mission-side p-mission-side__left">
+                <div class="p-mission-side__left--inner">
+                  <div
+                    class="p-mission-side__item p-mission-side__left--item luxy-el"
+                    data-speed-y="-20"
+                  >
+                    <img src="image/img_side_01.png" alt="" />
+                  </div>
+                  <div
+                    class="p-mission-side__item p-mission-side__left--item luxy-el"
+                    data-speed-y="-11"
+                  >
+                    <img src="image/img_side_02.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="p-mission-side p-mission-side__right">
+                <div class="p-mission-side__right--inner">
+                  <div
+                    class="p-mission-side__item p-mission-side__right--item luxy-el"
+                    data-speed-y="-16"
+                  >
+                    <img src="image/img_side_03.png" alt="" />
+                  </div>
+                  <div
+                    class="p-mission-side__item p-mission-side__right--item luxy-el"
+                    data-speed-y="-9"
+                  >
+                    <img src="image/img_side_04.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- /.c-container -->
         </section>
