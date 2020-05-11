@@ -24,6 +24,19 @@ $(document).ready(function () {
 });
 
 $(function () {
+  $(".l-header").css("display", "none");
+  setTimeout(function () {
+    $(".js-anime-value").addClass("active");
+  }, 500); //0.5秒後にロゴをフェードイン!
+  setTimeout(function () {
+    $(".l-header").fadeIn(500);
+  }, 1300); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
+  setTimeout(function () {
+    $(".p-value-head").addClass("active");
+  }, 1300);
+});
+
+$(function () {
   $.scrolline({
     direction: "vertical",
     frontColor: "#ee3281",
@@ -48,17 +61,29 @@ $(function () {
     if ($(".l-gnav").hasClass("on")) {
       //fullnavが開いている時
       $(".l-gnav").removeClass("on").fadeOut();
-      $(".l-btn-open").addClass("on");
-      $(".l-btn-close").removeClass("on");
+      $(".l-btn-open, .l-header__logo--off").addClass("on");
+      $(".l-btn-close, .l-header__logo--on").removeClass("on");
     } else {
       //fullnavが閉じている時
       $(".l-gnav").fadeIn();
       setTimeout(function () {
         $(".l-gnav").addClass("on");
       }, 200);
-      $(".l-btn-close").addClass("on");
-      $(".l-btn-open").removeClass("on");
+      $(".l-btn-close, .l-header__logo--on").addClass("on");
+      $(".l-btn-open, .l-header__logo--off").removeClass("on");
     }
+  });
+
+  var startPos = 0,
+    winScrollTop = 0;
+  $(window).on("scroll", function () {
+    winScrollTop = $(this).scrollTop();
+    if (winScrollTop >= 50) {
+      $(".l-header__logo").addClass("hide");
+    } else {
+      $(".l-header__logo").removeClass("hide");
+    }
+    startPos = winScrollTop;
   });
 });
 

@@ -118,6 +118,23 @@ li {
   transform: translate(0, 0px);
 }
 
+.js-start {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  z-index: 999;
+}
+
+.js-anime-value {
+  transform: translateY(-100%);
+  transition: all 1s cubic-bezier(0.6, 0.21, 0.13, 1);
+}
+
+.js-anime-value.active {
+  transform: translateY(0);
+}
+
 .c-ttl {
   font-size: 80px;
   font-weight: 900;
@@ -223,6 +240,41 @@ li {
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.l-header__logo {
+  position: relative;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.l-header__logo.hide {
+  opacity: 0;
+}
+
+.l-header__logo--inner {
+  display: block;
+  transition: opacity 1s cubic-bezier(0.19, 1, 0.22, 1);
+  transition-delay: 0.1s;
+}
+
+.l-header__logo--off {
+  opacity: 0;
+}
+
+.l-header__logo--off.on {
+  opacity: 1;
+}
+
+.l-header__logo--on {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.l-header__logo--on.on {
+  opacity: 1;
 }
 
 .l-header-inner {
@@ -544,11 +596,43 @@ li {
 .p-value-head__heading--lead {
   display: block;
   margin-bottom: 30px;
+  transition: all 0.5s;
+  opacity: 0;
 }
 
 .p-value-head__heading--box {
   position: relative;
   width: 70vw;
+  transform: translateY(30px);
+  transition: all 1s;
+  opacity: 0;
+}
+
+.p-value-head__heading--box .p-txt-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(0);
+  opacity: 80%;
+  transition: all 1s ease-in-out;
+}
+
+.p-value-head__heading--box .p-txt-cover.delay07 {
+  transition-delay: 0.1s;
+}
+
+.p-value-head__heading--box .p-txt-cover.delay08 {
+  transition-delay: 0.2s;
+}
+
+.p-value-head__heading--box .p-txt-cover.delay09 {
+  transition-delay: 0.3s;
+}
+
+.p-value-head__heading--box .p-txt-cover.delay10 {
+  transition-delay: 0.4s;
 }
 
 .p-value-head__heading--ttl {
@@ -559,6 +643,19 @@ li {
 
 .p-value-head__heading--ttl:first-child {
   position: relative;
+}
+
+.p-value-head.active .p-value-head__heading--lead {
+  opacity: 1;
+}
+
+.p-value-head.active .p-value-head__heading--box {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.p-value-head.active .p-txt-cover {
+  transform: translateX(100%);
 }
 
 .p-value-body {
@@ -618,8 +715,9 @@ li {
   left: 0;
   width: 23%;
   height: 100%;
-  margin-top: -60px;
+  margin-top: -70px;
   margin-left: -0.4%;
+  overflow: hidden;
 }
 
 .p-value-side__cover {
