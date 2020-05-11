@@ -334,16 +334,22 @@ $color-gray: #bcbec0;
 
     a {
       color: #fff;
+      transition: all 0.3s;
+
+      &:hover {
+        opacity: 0.5;
+      }
     }
 
     &__head {
       color: #fff;
+      font-weight: 700;
     }
   }
 
   &-top {
-    padding-bottom: 75px;
-    margin-bottom: 75px;
+    padding-bottom: 80px;
+    margin-bottom: 80px;
     position: relative;
 
     &:after {
@@ -370,6 +376,7 @@ $color-gray: #bcbec0;
   }
 
   &-middle {
+    margin-bottom: 105px;
     &__list {
       display: flex;
 
@@ -390,7 +397,35 @@ $color-gray: #bcbec0;
 
     &__element {
       > * {
-        margin-bottom: 20px;
+        margin-bottom: 22px;
+      }
+    }
+  }
+
+  &-bottom {
+    justify-content: space-between;
+    font-size: 11px;
+    color: #fff;
+    letter-spacing: 0.08em;
+    // font-weight: 700;
+
+    &__left {
+      display: flex;
+
+      &--list {
+        &:last-child {
+          font-size: 14px;
+          margin-left: 40px;
+          font-weight: 700;
+        }
+      }
+
+      .l-sns-list {
+        display: flex;
+
+        &__item {
+          margin-right: 20px;
+        }
       }
     }
   }
@@ -428,7 +463,6 @@ $color-gray: #bcbec0;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 5;
 
   &-right {
     align-items: center;
@@ -475,6 +509,8 @@ $color-gray: #bcbec0;
 }
 
 .l-gnav.on {
+  z-index: 5;
+
   .l-gnav-right {
     opacity: 1;
     width: 340px;
@@ -506,7 +542,7 @@ $color-gray: #bcbec0;
 
   &-inner {
     padding-left: 22%;
-    margin-top: 60px;
+    margin-top: 70px;
     position: relative;
   }
   &-head {
@@ -759,7 +795,6 @@ $color-gray: #bcbec0;
 }
 
 .p-experience {
-  margin-bottom: 200px;
   position: relative;
 
   &__heading {

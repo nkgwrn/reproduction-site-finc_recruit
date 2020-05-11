@@ -330,15 +330,21 @@ li {
 
 .l-footer-inner a {
   color: #fff;
+  transition: all 0.3s;
+}
+
+.l-footer-inner a:hover {
+  opacity: 0.5;
 }
 
 .l-footer-inner__head {
   color: #fff;
+  font-weight: 700;
 }
 
 .l-footer-top {
-  padding-bottom: 75px;
-  margin-bottom: 75px;
+  padding-bottom: 80px;
+  margin-bottom: 80px;
   position: relative;
 }
 
@@ -364,6 +370,10 @@ li {
   margin-right: 40px;
 }
 
+.l-footer-middle {
+  margin-bottom: 105px;
+}
+
 .l-footer-middle__list {
   display: flex;
 }
@@ -383,7 +393,32 @@ li {
 }
 
 .l-footer-middle__element > * {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+}
+
+.l-footer-bottom {
+  justify-content: space-between;
+  font-size: 11px;
+  color: #fff;
+  letter-spacing: 0.08em;
+}
+
+.l-footer-bottom__left {
+  display: flex;
+}
+
+.l-footer-bottom__left--list:last-child {
+  font-size: 14px;
+  margin-left: 40px;
+  font-weight: 700;
+}
+
+.l-footer-bottom__left .l-sns-list {
+  display: flex;
+}
+
+.l-footer-bottom__left .l-sns-list__item {
+  margin-right: 20px;
 }
 
 /***********
@@ -424,7 +459,6 @@ li {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 5;
 }
 
 .l-gnav-right {
@@ -468,6 +502,10 @@ li {
   width: 100%;
 }
 
+.l-gnav.on {
+  z-index: 5;
+}
+
 .l-gnav.on .l-gnav-right {
   opacity: 1;
   width: 340px;
@@ -499,7 +537,7 @@ li {
 
 .p-value-inner {
   padding-left: 22%;
-  margin-top: 60px;
+  margin-top: 70px;
   position: relative;
 }
 
@@ -736,7 +774,6 @@ li {
 }
 
 .p-experience {
-  margin-bottom: 200px;
   position: relative;
 }
 
