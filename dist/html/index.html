@@ -36,10 +36,17 @@
     </a>
     <div class="l-header__menu">
       <ul class="l-header-nav">
-        <li><a href="">EN</a></li>
-        <li>
+        <li class="l-header-nav__item"><a href="">EN</a></li>
+        <li class="l-header-nav__item js-menu">
           Menu
-          <span></span>
+          <div class="l-header-nav__item--btn l-btn-open on">
+            <span class="l-btn-open__icon"></span>
+            <span class="l-btn-open__icon"></span>
+          </div>
+          <div class="l-header-nav__item--btn l-btn-close">
+            <span class="l-btn-close__icon"></span>
+            <span class="l-btn-close__icon"></span>
+          </div>
         </li>
       </ul>
     </div>
@@ -47,6 +54,35 @@
 </header>
 <!-- /.l-header -->
 
+    <div class="l-gnav">
+      <div class="l-gnav-left transition10">
+        <div>aaa</div>
+      </div>
+      <div class="l-gnav-right transition10">
+        <nav class="l-gnav-body">
+          <ul class="l-gnav-body__list">
+            <li class="l-gnav-body__list--item transition10 delay01">
+              <a href="">Message</a>
+            </li>
+            <li class="l-gnav-body__list--item transition10 delay02">
+              <a href="">Jobs</a>
+            </li>
+            <li class="l-gnav-body__list--item transition10 delay03">
+              <a href="">Business</a>
+            </li>
+            <li class="l-gnav-body__list--item transition10 delay04">
+              <a href="">Team</a>
+            </li>
+            <li class="l-gnav-body__list--item transition10 delay05">
+              <a href="">Experience</a>
+            </li>
+            <li class="l-gnav-body__list--item transition10 delay06">
+              <a href="">Corporate</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
     <div class="wrapper" id="luxy">
       <main class="l-main">
         <section class="p-value">
@@ -258,9 +294,8 @@
               <div class="p-experience__body">
                 <ul class="p-card">
                   <li
-                    class="p-card__item p-card__item--left js-fadein fadein05"
-                    data-enllax-ratio="-0.01"
-                    data-enllax-direction="vertical"
+                    class="p-card__item p-card__item--left luxy-el js-fadein fadein05"
+                    data-speed-y="-0.5"
                   >
                     <a href="" class="p-experience-list">
                       <img src="/image/img_experience1.jpg" alt="" />
@@ -275,9 +310,8 @@
                     </a>
                   </li>
                   <li
-                    class="p-card__item p-card__item--right js-fadein fadein05"
-                    data-enllax-ratio="0.01"
-                    data-enllax-direction="vertical"
+                    class="p-card__item p-card__item--right luxy-el js-fadein fadein05"
+                    data-speed-y="0.5"
                   >
                     <a href="" class="p-experience-list">
                       <img src="/image/img_experience2.jpg" alt="" />
