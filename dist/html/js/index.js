@@ -34,6 +34,9 @@ $(function () {
   setTimeout(function () {
     $(".p-value-head").addClass("active");
   }, 1300);
+  setTimeout(function () {
+    $(".js-start").fadeOut(100);
+  }, 2000);
 });
 
 $(function () {

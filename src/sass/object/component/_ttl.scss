@@ -1,0 +1,25 @@
+@charset "UTF-8";
+.c-ttl {
+  font-size: 80px;
+  font-weight: 900;
+
+  &__txt {
+    letter-spacing: 0.03em;
+    font-size: 64px;
+    margin-bottom: -10px;
+  }
+
+  &__sub {
+    margin-top: 25px;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    margin-bottom: -5px;
+  }
+
+  &__pink {
+    color: $color-pink;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    margin-bottom: 45px;
+  }
+}

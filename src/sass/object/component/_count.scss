@@ -1,0 +1,13 @@
+@charset "UTF-8";
+.c-count{
+  color:#fff;
+  width: 18px;
+  height: 18px;
+  background:$color-red;
+  border-radius:50%;
+  -js-display:flex;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  @include fontSize(0.9);
+}

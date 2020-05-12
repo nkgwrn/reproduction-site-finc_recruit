@@ -1,0 +1,39 @@
+@charset "utf-8";
+.u-bold,
+.u-strong {
+  font-weight: bold;
+}
+
+.u-large {
+  @include fontSize(1.2);
+}
+
+.u-exLarge {
+  @include fontSize(2);
+  @include mqSm {
+    @include fontSize(1.4);
+  }
+}
+
+.u-small {
+  font-size: 80%;
+}
+
+.u-blue {
+  color: $color-active;
+}
+
+.u-orange {
+  color: $color-orange;
+}
+
+.u-accent {
+  color: $color-accent02;
+  font-weight: inherit;
+}
+
+.u-notice {
+  @include fontSize(1.2);
+  text-indent: -1em;
+  padding-left: 1em;
+}

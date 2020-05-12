@@ -1,0 +1,13 @@
+@charset "utf-8";
+.u-flex {
+  -js-display: flex;
+  display: flex;
+}
+
+.u-flex--aiCenter {
+  align-items: center;
+}
+
+.u-flex-none {
+  flex: none!important;
+}
