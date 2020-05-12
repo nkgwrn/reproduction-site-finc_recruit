@@ -2,11 +2,23 @@
 .p-jobs {
   position: relative;
 
+  @include mqSm {
+    margin-bottom: -300px;
+    margin-top: 200px;
+  }
+
   &-wrapper {
     padding-left: 160px;
     padding-bottom: 100px;
     background: #fff;
     width: 100vw;
     margin-bottom: -150px;
+
+    @include mqSm {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      padding-bottom: 60px;
+    }
   }
 }

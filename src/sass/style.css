@@ -386,6 +386,14 @@ li {
   top: 0;
   left: 0;
   width: 100%;
+  transform: translateY(-20px);
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.l-header.active {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 .l-header__logo {
@@ -427,6 +435,12 @@ li {
   margin: 40px 50px;
   display: flex;
   justify-content: space-between;
+}
+
+@media only screen and (max-width: 480px) {
+  .l-header-inner {
+    margin: 20px 15px;
+  }
 }
 
 .l-header-nav {
@@ -518,7 +532,7 @@ li {
 .l-footer {
   font-size: 16px;
   padding: 265px 0 55px;
-  background: url(/image/img_footer.jpg);
+  background: url("/image/img_footer.jpg");
   letter-spacing: 0.05em;
 }
 
@@ -1157,11 +1171,24 @@ li {
   position: relative;
 }
 
+@media only screen and (max-width: 480px) {
+  .p-value-inner {
+    padding-left: 30%;
+    margin-top: 0;
+  }
+}
+
 .p-value-head__heading--lead {
   display: block;
   margin-bottom: 30px;
   transition: all 0.5s;
   opacity: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-value-head__heading--lead img {
+    width: 80px;
+  }
 }
 
 .p-value-head__heading--box {
@@ -1180,23 +1207,23 @@ li {
   height: 100%;
   transform: translateX(0);
   opacity: 80%;
-  transition: all 1s ease-in-out;
+  transition: all 2s cubic-bezier(0.42, 0, 0.23, 0.92);
 }
 
 .p-value-head__heading--box .p-txt-cover.delay07 {
-  transition-delay: 0.1s;
+  transition-delay: 1.1s;
 }
 
 .p-value-head__heading--box .p-txt-cover.delay08 {
-  transition-delay: 0.2s;
+  transition-delay: 1.2s;
 }
 
 .p-value-head__heading--box .p-txt-cover.delay09 {
-  transition-delay: 0.3s;
+  transition-delay: 1.3s;
 }
 
 .p-value-head__heading--box .p-txt-cover.delay10 {
-  transition-delay: 0.4s;
+  transition-delay: 1.4s;
 }
 
 .p-value-head__heading--ttl {
@@ -1227,6 +1254,9 @@ li {
   padding: 120px;
   position: relative;
   color: #fff;
+  transform: translateY(30px);
+  transition: all 1s;
+  opacity: 0;
 }
 
 .p-value-body__box {
@@ -1258,7 +1288,7 @@ li {
   top: 0;
   left: 0;
   z-index: 1;
-  background-image: url(/image/img_recruiting_statement.jpg);
+  background-image: url("/image/img_recruiting_statement.jpg");
   background-size: 125%;
   background-position: top 43% right 49%;
   background-repeat: no-repeat;
@@ -1273,6 +1303,11 @@ li {
   z-index: -1;
 }
 
+.p-value-body.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
 .p-value-side {
   position: absolute;
   top: 0;
@@ -1284,11 +1319,25 @@ li {
   overflow: hidden;
 }
 
+@media only screen and (max-width: 480px) {
+  .p-value-side {
+    width: 20.5%;
+    height: 100vw;
+    margin-top: -30px;
+  }
+}
+
 .p-value-side__cover {
   width: 66%;
   position: absolute;
   z-index: 3;
   top: -1px;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-value-side__cover {
+    width: 100%;
+  }
 }
 
 .p-value-side__inner {
@@ -1298,6 +1347,93 @@ li {
   left: 0;
   width: 66%;
   height: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-value-side__inner {
+    width: 100%;
+  }
+}
+
+.p-value-bar {
+  position: absolute;
+  width: 1px;
+  height: 50px;
+  background: #ee3281;
+  top: 44%;
+  right: 65px;
+  z-index: 5;
+  animation: 2s linear infinite forwards running expansion;
+}
+
+@keyframes expansion {
+  0% {
+    transform-origin: top;
+    transform: scale(0);
+  }
+  50% {
+    transform-origin: top;
+    transform: scale(1);
+  }
+  51% {
+    transform-origin: bottom;
+    transform: scale(1);
+  }
+  100% {
+    transform-origin: bottom;
+    transform: scale(0);
+  }
+}
+
+/* ---------------------------------------------------------
+ Utility
+--------------------------------------------------------- */
+.u-brSp {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .u-brSp {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .u-brPc {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .u-noneSp {
+    display: none;
+  }
+}
+
+.u-nonePc {
+  display: none !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .u-nonePc {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .u-noneMd {
+    display: none;
+  }
+}
+
+.u-nonePcMd {
+  display: none !important;
+}
+
+@media only screen and (max-width: 480px) {
+  .u-nonePcMd {
+    display: block !important;
+  }
 }
 
 .progress {

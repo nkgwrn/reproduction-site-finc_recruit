@@ -8,6 +8,11 @@
     margin-top: 150px;
     z-index: 5;
 
+    @include mqSm {
+      margin-top: 40px;
+      padding-bottom: 0;
+    }
+
     .p-lead-img__left {
       width: 650px;
       position: relative;

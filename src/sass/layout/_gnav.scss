@@ -82,6 +82,10 @@
   .l-gnav-right {
     opacity: 1;
     width: 340px;
+
+    @include mqSm {
+      width: 100%;
+    }
   }
 
   .l-gnav-body__list--item {
@@ -91,5 +95,9 @@
   .l-gnav-left {
     opacity: 1;
     width: calc(100% - 340px);
+
+    @include mqSm {
+      width: 0;
+    }
   }
 }

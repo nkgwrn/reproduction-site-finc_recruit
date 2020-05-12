@@ -4,6 +4,10 @@
 
   &__heading {
     width: 525px;
+
+    @include mqSm {
+      width: 100%;
+    }
   }
 
   .p-card {
@@ -11,6 +15,12 @@
     padding-left: 180px;
     padding-top: 65px;
     align-items: flex-start;
+
+    @include mqSm {
+      display: block;
+      padding-top: 40px;
+      padding-left: 0;
+    }
 
     &__item {
       width: 309px;
@@ -20,8 +30,17 @@
         margin-top: 150px;
         margin-left: 50px;
 
+        @include mqSm {
+          margin-top: 100px;
+          margin-left: 0;
+        }
+
         .p-experience-list__box {
           bottom: -106px;
+
+          @include mqSm {
+            bottom: -98px;
+          }
         }
       }
     }
@@ -47,14 +66,25 @@
       width: calc(100% - 30px);
       padding: 30px;
       position: absolute;
-      bottom: -80px;
+      bottom: -72px;
       background: #fff;
+
+      @include mqSm {
+        width: calc(100% - 20px);
+        padding: 20px;
+        bottom: -75px;
+        right: 0;
+      }
 
       &--head {
         font-weight: 900;
         font-size: 22px;
         color: $color-pink;
         letter-spacing: 0.04em;
+
+        @include mqSm {
+          font-size: 16px;
+        }
       }
 
       &--body {

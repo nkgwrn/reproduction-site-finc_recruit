@@ -56,6 +56,10 @@
     margin: 40px 50px;
     display: flex;
     justify-content: space-between;
+
+    @include mqSm {
+      margin: 20px 15px;
+    }
   }
 
   &-nav {

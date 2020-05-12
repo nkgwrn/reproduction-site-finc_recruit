@@ -8,8 +8,21 @@
   background: url("/image/img_footer.jpg");
   letter-spacing: 0.05em;
 
+  @include mqSm {
+    padding-top: 400px;
+    background: url(/image/sp/img_footer.jpg), #222;
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    font-size: 20px;
+  }
+
   &-inner {
     display: flex;
+
+    @include mqSm {
+      display: block;
+    }
 
     a {
       color: #fff;
@@ -31,6 +44,11 @@
     margin-bottom: 80px;
     position: relative;
 
+    @include mqSm {
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+    }
+
     &:after {
       content: "";
       position: absolute;
@@ -38,6 +56,10 @@
       height: 1px;
       background-color: #fff;
       bottom: 0;
+
+      @include mqSm {
+        width: 100%;
+      }
     }
 
     &__head {
@@ -48,19 +70,47 @@
       display: flex;
       font-size: 14px;
 
+      @include mqSm {
+        flex-wrap: wrap;
+        font-size: 13px;
+      }
+
       > * {
         margin-right: 40px;
+
+        @include mqSm {
+          width: 50%;
+          margin-top: 20px;
+          margin-right: 0;
+        }
       }
     }
   }
 
   &-middle {
     margin-bottom: 105px;
+
+    @include mqSm {
+      margin-bottom: 70px;
+    }
+
     &__list {
       display: flex;
 
+      @include mqSm {
+        display: block;
+      }
+
       &--item {
         margin-right: 100px;
+
+        @include mqSm {
+          margin-right: 0;
+
+          &:nth-child(2) {
+            margin-top: 60px;
+          }
+        }
       }
     }
 
@@ -68,6 +118,12 @@
       display: flex;
       font-size: 11px;
       margin-top: 30px;
+
+      @include mqSm {
+        display: block;
+        font-size: 13px;
+        margin-top: 20px;
+      }
 
       &--item {
         margin-right: 70px;

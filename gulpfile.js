@@ -8,12 +8,13 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 
 function buildJS(cb) {
-  gulp.src("src/js/*.js").pipe(gulp.dest("./public/js"));
+  gulp.src("./src/js/*.js").pipe(gulp.dest("./public/js"));
   cb();
 }
 
 function buildImage(cb) {
-  gulp.src("src/image/*").pipe(gulp.dest("./public/image/"));
+  gulp.src(["./src/image/*"]).pipe(gulp.dest("./public/image/"));
+  gulp.src(["./src/image/sp/*"]).pipe(gulp.dest("./public/image/sp"));
   cb();
 }
 
@@ -54,6 +55,7 @@ function watchJS(cb) {
 
 function watchImage(cb) {
   gulp.watch(["./src/image/*"], buildImage).on("change", browserSync.reload);
+  gulp.watch(["./src/image/sp/*"], buildImage).on("change", browserSync.reload);
   cb();
 }
 

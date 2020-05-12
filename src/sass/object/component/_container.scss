@@ -3,4 +3,9 @@
   width: 1120px;
   padding: 0 40px;
   margin: 0 auto;
+
+  @include mqSm {
+    width: calc(100% - 30px);
+    padding: 0;
+  }
 }

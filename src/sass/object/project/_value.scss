@@ -6,6 +6,11 @@
     padding-left: 22%;
     margin-top: 70px;
     position: relative;
+
+    @include mqSm {
+      padding-left: 30%;
+      margin-top: 0;
+    }
   }
   &-head {
     &__heading {
@@ -14,6 +19,12 @@
         margin-bottom: 30px;
         transition: all 0.5s;
         opacity: 0;
+
+        @include mqSm {
+          img {
+            width: 80px;
+          }
+        }
       }
 
       &--box {
@@ -84,11 +95,24 @@
     transition: all 1s;
     opacity: 0;
 
+    @include mqSm {
+      padding: 0;
+      margin: 0;
+      margin-left: -70px;
+      top: 130px;
+    }
+
     &__box {
       position: relative;
       z-index: 2;
       font-size: 13px;
       line-height: 2.2;
+
+      @include mqSm {
+        background-image: url(/image/img_recruiting_statement.jpg);
+        font-size: 12px;
+        padding: 50px 30px;
+      }
     }
 
     &__heading {
@@ -96,6 +120,11 @@
       letter-spacing: 0.1em;
       margin-bottom: 50px;
       line-height: 1;
+
+      @include mqSm {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
     }
 
     &__txt {
@@ -103,6 +132,10 @@
 
       + .p-value-body__txt {
         margin-top: 30px;
+
+        @include mqSm {
+          margin-top: 20px;
+        }
       }
     }
 
@@ -147,11 +180,21 @@
     margin-left: -0.4%;
     overflow: hidden;
 
+    @include mqSm {
+      width: 20.5%;
+      height: 100vw;
+      margin-top: -30px;
+    }
+
     &__cover {
       width: 66%;
       position: absolute;
       z-index: 3;
       top: -1px;
+
+      @include mqSm {
+        width: 100%;
+      }
     }
 
     &__inner {
@@ -161,6 +204,10 @@
       left: 0;
       width: 66%;
       height: 100%;
+
+      @include mqSm {
+        width: 100%;
+      }
     }
   }
 

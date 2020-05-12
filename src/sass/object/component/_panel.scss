@@ -2,6 +2,10 @@
 .c-panel {
   margin-top: 150px;
 
+  @include mqSm {
+    margin-top: 60px;
+  }
+
   &:first-of-type {
     margin-top: 0;
   }
@@ -15,9 +19,19 @@
       display: flex;
       align-items: flex-end;
 
+      @include mqSm {
+        display: block;
+        text-align: center;
+      }
+
       &--txt {
         margin-left: 70px;
         font-weight: normal;
+
+        @include mqSm {
+          margin: 20px 0 0;
+          font-size: 12px;
+        }
       }
     }
   }
@@ -26,11 +40,28 @@
     margin-top: 60px;
     line-height: 2;
     letter-spacing: 0.02em;
+
+    @include mqSm {
+      font-size: 14px;
+      text-align: left;
+      margin-top: 40px;
+      line-height: 1.7;
+    }
+  }
+
+  &-sp {
+    @include mqSm {
+      padding: 0 18px;
+    }
   }
 }
 
 .p-experience .c-panel-body {
   margin-top: 45px;
+
+  @include mqSm {
+    line-height: 2;
+  }
 }
 
 .p-box-center .c-panel-body {

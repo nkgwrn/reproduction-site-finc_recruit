@@ -3,6 +3,10 @@
   &-inner {
     display: flex;
 
+    @include mqSm {
+      display: block;
+    }
+
     &__box {
       margin-right: 30px;
       border-radius: 10px;
@@ -17,6 +21,13 @@
       align-items: center;
       position: relative;
       cursor: pointer;
+
+      @include mqSm {
+        margin: 0 auto;
+        width: 260px;
+        height: 48px;
+        margin-bottom: 20px;
+      }
 
       &:after {
         content: "";
@@ -42,6 +53,10 @@
     &__btn {
       margin: 0;
       font-size: 13px;
+
+      @include mqSm {
+        margin: 0 auto;
+      }
     }
   }
 
@@ -57,8 +72,16 @@
     display: none;
     flex-wrap: wrap;
 
+    @include mqSm {
+      padding: 10px 20px 20px;
+    }
+
     &.p-form-list01 {
       width: 900px;
+
+      @include mqSm {
+        width: 260px;
+      }
     }
 
     &.p-form-list02 {
@@ -67,6 +90,10 @@
 
     &.is-open {
       display: flex;
+
+      @include mqSm {
+        display: block;
+      }
     }
 
     &::before {
@@ -77,6 +104,14 @@
       height: 10px;
       background-color: #fff;
       position: absolute;
+
+      @include mqSm {
+        width: 258px;
+        border: 1px solid #bcbec0;
+        border-top: none;
+        border-bottom: none;
+        left: -1px;
+      }
     }
 
     &__item {
@@ -84,6 +119,10 @@
       padding: 15px 0;
       color: #000000;
       font-weight: 700;
+
+      @include mqSm {
+        width: 100%;
+      }
     }
   }
 }

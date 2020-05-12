@@ -14,6 +14,15 @@
   margin-top: 90px;
   font-weight: bold;
   font-size: 14px;
+  letter-spacing: 0.1em;
+
+  @include mqSm {
+    background-color: #303030;
+    width: 220px;
+    margin-top: 35px;
+    height: 48px;
+    line-height: 48px;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -22,6 +31,10 @@
   &__feature {
     margin-top: 60px;
     margin-left: 0;
+
+    @include mqSm {
+      margin: 30px auto 0;
+    }
   }
 }
 

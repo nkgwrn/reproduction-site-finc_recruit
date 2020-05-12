@@ -4,7 +4,7 @@
  Foundation
 ========================================================= */
 @import "foundation/variables";
-// @import "foundation/mixin";
+@import "foundation/mixin";
 @import "foundation/reset";
 @import "foundation/base";
 @import "foundation/animation";
@@ -58,6 +58,10 @@
 @import "object/project/lead";
 @import "object/project/mission";
 @import "object/project/value";
+/* ---------------------------------------------------------
+ Utility
+--------------------------------------------------------- */
+@import "object/utility/function";
 
 .progress {
   height: 80px;
