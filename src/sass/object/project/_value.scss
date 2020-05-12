@@ -163,4 +163,34 @@
       height: 100%;
     }
   }
+
+  &-bar {
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    background: $color-pink;
+    top: 44%;
+    right: 65px;
+    z-index: 5;
+    animation: 2s linear infinite forwards running expansion;
+  }
+
+  @keyframes expansion {
+    0% {
+      transform-origin: top;
+      transform: scale(0);
+    }
+    50% {
+      transform-origin: top;
+      transform: scale(1);
+    }
+    51% {
+      transform-origin: bottom;
+      transform: scale(1);
+    }
+    100% {
+      transform-origin: bottom;
+      transform: scale(0);
+    }
+  }
 }

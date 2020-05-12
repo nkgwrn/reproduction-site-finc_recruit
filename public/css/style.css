@@ -1315,6 +1315,56 @@ li {
   height: 100%;
 }
 
+.p-value-bar {
+  position: absolute;
+  width: 1px;
+  height: 50px;
+  background: #ee3281;
+  top: 44%;
+  right: 65px;
+  z-index: 5;
+  -webkit-animation: 2s linear infinite forwards running expansion;
+  animation: 2s linear infinite forwards running expansion;
+}
+
+@-webkit-keyframes expansion {
+  0% {
+    transform-origin: top;
+    transform: scale(0);
+  }
+  50% {
+    transform-origin: top;
+    transform: scale(1);
+  }
+  51% {
+    transform-origin: bottom;
+    transform: scale(1);
+  }
+  100% {
+    transform-origin: bottom;
+    transform: scale(0);
+  }
+}
+
+@keyframes expansion {
+  0% {
+    transform-origin: top;
+    transform: scale(0);
+  }
+  50% {
+    transform-origin: top;
+    transform: scale(1);
+  }
+  51% {
+    transform-origin: bottom;
+    transform: scale(1);
+  }
+  100% {
+    transform-origin: bottom;
+    transform: scale(0);
+  }
+}
+
 .progress {
   height: 80px;
   width: 80px;
