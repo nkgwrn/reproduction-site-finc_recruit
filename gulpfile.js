@@ -19,7 +19,7 @@ function buildImage(cb) {
 
 function buildSass(cb) {
   gulp
-    .src("./src/sass/*.scss")
+    .src("./src/sass/**/*.scss")
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(
       postcss([
@@ -65,7 +65,9 @@ function watchEjs(cb) {
 }
 
 function watchSass(cb) {
-  gulp.watch(["./src/sass/*.scss"], buildSass).on("change", browserSync.reload);
+  gulp
+    .watch(["./src/sass/**/*.scss"], buildSass)
+    .on("change", browserSync.reload);
   cb();
 }
 

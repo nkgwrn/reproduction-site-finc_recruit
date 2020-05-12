@@ -386,6 +386,14 @@ li {
   top: 0;
   left: 0;
   width: 100%;
+  transform: translateY(-20px);
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.l-header.active {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 .l-header__logo {
@@ -1179,7 +1187,7 @@ li {
   height: 100%;
   transform: translateX(0);
   opacity: 80%;
-  transition: all 1s ease-in-out;
+  transition: all 2s cubic-bezier(0.42, 0, 0.23, 0.92);
 }
 
 .p-value-head__heading--box .p-txt-cover.delay07 {
@@ -1226,6 +1234,9 @@ li {
   padding: 120px;
   position: relative;
   color: #fff;
+  transform: translateY(30px);
+  transition: all 1s;
+  opacity: 0;
 }
 
 .p-value-body__box {
@@ -1270,6 +1281,11 @@ li {
   position: absolute;
   top: -65px;
   z-index: -1;
+}
+
+.p-value-body.active {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 .p-value-side {

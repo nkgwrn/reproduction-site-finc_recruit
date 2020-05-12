@@ -24,19 +24,21 @@ $(document).ready(function () {
 });
 
 $(function () {
-  $(".l-header").css("display", "none");
   setTimeout(function () {
     $(".js-anime-value").addClass("active");
-  }, 500); //0.5秒後にロゴをフェードイン!
+  }, 1000);
   setTimeout(function () {
-    $(".l-header").fadeIn(500);
-  }, 1300); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
+    $(".l-header").addClass("active");
+  }, 1800);
   setTimeout(function () {
     $(".p-value-head").addClass("active");
-  }, 1300);
+  }, 1800);
+  setTimeout(function () {
+    $(".p-value-body").addClass("active");
+  }, 2300);
   setTimeout(function () {
     $(".js-start").fadeOut(100);
-  }, 2000);
+  }, 2500);
 });
 
 $(function () {
