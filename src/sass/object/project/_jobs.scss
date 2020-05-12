@@ -1,0 +1,12 @@
+@charset "UTF-8";
+.p-jobs {
+  position: relative;
+
+  &-wrapper {
+    padding-left: 160px;
+    padding-bottom: 100px;
+    background: #fff;
+    width: 100vw;
+    margin-bottom: -150px;
+  }
+}

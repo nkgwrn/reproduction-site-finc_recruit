@@ -1,0 +1,13 @@
+@charset "UTF-8";
+.c-linkAngle{
+  position:relative;
+  padding-left:1em;
+  &:before{
+    content:'>';
+    text-decoration: none;
+    color:$font-color;
+    position:absolute;
+    left:0;
+    top:0;
+  }
+}

@@ -1,0 +1,48 @@
+@charset "UTF-8";
+.p-feature {
+  position: relative;
+
+  &__txt {
+    width: 375px;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: -110px;
+
+    &--business {
+      top: -170px;
+    }
+
+    &--box {
+      width: 587px;
+      height: 241px;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      + .p-feature__img--box {
+        margin-top: 35px;
+        width: 620px;
+        margin-left: 120px;
+      }
+    }
+  }
+}
+
+.p-feature-team {
+  &__txt {
+    margin-right: 0;
+    margin-left: auto;
+    padding-top: 120px;
+  }
+
+  &__img {
+    left: -155px;
+    width: 600px;
+  }
+}

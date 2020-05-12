@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+// フォントサイズ
+// --------------------
+@mixin fontSize($sizeValue: ($font-size/10)) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: ($sizeValue * 1) + rem;
+}
+
+// メディアクエリ （デスクトップファースト）
+// --------------------
+@mixin mqLg {
+  @media only screen and (max-width: $widthLg + px) {
+    @content;
+  }
+}
+
+@mixin mqMd {
+  @media only screen and (max-width: $widthMd + px) {
+    @content;
+  }
+}
+
+@mixin mqSm {
+  @media only screen and (max-width: $widthSm + px) {
+    @content;
+  }
+}

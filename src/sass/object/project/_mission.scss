@@ -1,0 +1,47 @@
+@charset "UTF-8";
+.p-mission {
+  // position: relative;
+  &-inner {
+    position: relative;
+  }
+
+  &-side {
+    position: relative;
+    z-index: -1;
+
+    &__item {
+      position: absolute;
+      display: flex;
+      z-index: 3;
+      align-items: flex-start;
+    }
+
+    &__left {
+      left: -80px;
+
+      &--item {
+        top: 600px;
+        left: -120px;
+
+        &:nth-child(2) {
+          top: -150px;
+          left: 0px;
+        }
+      }
+    }
+
+    &__right {
+      right: -65px;
+
+      &--item {
+        right: 0;
+        top: 800px;
+
+        &:nth-child(2) {
+          right: -133px;
+          top: 100px;
+        }
+      }
+    }
+  }
+}

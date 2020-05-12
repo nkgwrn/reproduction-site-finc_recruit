@@ -1,0 +1,18 @@
+@charset "UTF-8";
+.c-txtBox {
+  p {
+    line-height: 2.0;
+    margin-bottom: 1em;
+  }
+  // ul,
+  // ol{
+  //   margin-bottom: 1em;
+  // }
+  // > ol > li,
+  // > ul > li{
+  //  margin-bottom: 1em;
+  // }
+  > ol > li > *{
+    margin: 1em 0;
+  }
+}

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+.c-panel {
+  margin-top: 150px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &-head {
+    > * {
+      display: block;
+    }
+
+    &__form {
+      display: flex;
+      align-items: flex-end;
+
+      &--txt {
+        margin-left: 70px;
+        font-weight: normal;
+      }
+    }
+  }
+
+  &-body {
+    margin-top: 60px;
+    line-height: 2;
+    letter-spacing: 0.02em;
+  }
+}
+
+.p-experience .c-panel-body {
+  margin-top: 45px;
+}
+
+.p-box-center .c-panel-body {
+  font-weight: bold;
+}
