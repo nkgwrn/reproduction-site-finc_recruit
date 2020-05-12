@@ -24,7 +24,7 @@ function buildSass(cb) {
         }),
       ])
     )
-    .pipe(gulp.dest("./dist/html/css"));
+    .pipe(gulp.dest("./public/css"));
   cb();
 }
 
@@ -33,7 +33,7 @@ function buildEjs(cb) {
     .src(["./src/ejs/pages/*.ejs", "!./src/ejs/**/_*.ejs"])
     .pipe(ejs())
     .pipe(rename({ extname: ".html" }))
-    .pipe(gulp.dest("./dist/html"));
+    .pipe(gulp.dest("./public"));
   cb();
 }
 
@@ -52,7 +52,7 @@ function watchSass(cb) {
 function server(cb) {
   browserSync.init({
     server: {
-      baseDir: "./dist/html",
+      baseDir: "./public",
     },
   });
   cb();

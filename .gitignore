@@ -1,0 +1,9 @@
+# intellij editor setting file
+.idea
+
+# js modules
+node_modules
+package-lock.json
+
+dist
+public
