@@ -7,6 +7,16 @@ const postcss = require("gulp-postcss");
 // const autoprefixer = require("gulp-autoprefixer");
 const autoprefixer = require("autoprefixer");
 
+function buildJS(cb) {
+  gulp.src("src/js/*.js").pipe(gulp.dest("./public/js"));
+  cb();
+}
+
+function buildImage(cb) {
+  gulp.src("src/image/*").pipe(gulp.dest("./public/image/"));
+  cb();
+}
+
 function buildSass(cb) {
   gulp
     .src("./src/sass/*.scss")
@@ -37,6 +47,16 @@ function buildEjs(cb) {
   cb();
 }
 
+function watchJS(cb) {
+  gulp.watch(["./src/js/*.js"], buildJS).on("change", browserSync.reload);
+  cb();
+}
+
+function watchImage(cb) {
+  gulp.watch(["./src/image/*"], buildImage).on("change", browserSync.reload);
+  cb();
+}
+
 function watchEjs(cb) {
   gulp
     .watch(["./src/ejs/pages/*.ejs"], buildEjs)
@@ -58,5 +78,5 @@ function server(cb) {
   cb();
 }
 
-exports.watch = gulp.parallel(watchSass, watchEjs, server);
-exports.default = gulp.parallel(buildSass, buildEjs);
+exports.watch = gulp.parallel(watchSass, watchEjs, watchJS, watchImage, server);
+exports.default = gulp.parallel(buildSass, buildEjs, buildJS, buildImage);
