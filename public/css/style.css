@@ -951,7 +951,7 @@ li {
 
 .l-gnav.on {
   display: block;
-  z-index: 5;
+  z-index: 90;
   opacity: 1;
 }
 
@@ -1091,16 +1091,16 @@ li {
   }
 }
 
-.c-panel-head__form--ttl {
-  width: 85px;
-  margin: 0 auto;
+@media only screen and (max-width: 768px) {
+  .c-panel-head__form--ttl {
+    width: 85px;
+    margin: 0 auto;
+  }
 }
 
-@media only screen and (max-width: 768px) {
-  .c-panel-head__form--txt {
-    margin-left: 70px;
-    font-weight: normal;
-  }
+.c-panel-head__form--txt {
+  margin-left: 70px;
+  font-weight: normal;
 }
 
 @media only screen and (max-width: 768px) {

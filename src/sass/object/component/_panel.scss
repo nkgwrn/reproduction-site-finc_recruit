@@ -25,15 +25,15 @@
       }
 
       &--ttl {
-        width: 85px;
-        margin: 0 auto;
+        @include mqMd {
+          width: 85px;
+          margin: 0 auto;
+        }
       }
 
       &--txt {
-        @include mqMd {
-          margin-left: 70px;
-          font-weight: normal;
-        }
+        margin-left: 70px;
+        font-weight: normal;
 
         @include mqMd {
           margin: 20px 0 0;
