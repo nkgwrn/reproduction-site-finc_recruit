@@ -15,7 +15,7 @@
   @include mqMd {
     // position: fixed;
     width: 100vw;
-    height: 60px;
+    height: 58px;
     background: #fff;
   }
 
@@ -73,7 +73,9 @@
     justify-content: space-between;
 
     @include mqMd {
-      margin: 20px 15px;
+      align-items: center;
+      height: 100%;
+      margin: 0 16px;
     }
   }
 
@@ -81,6 +83,11 @@
     display: flex;
     font-size: 11px;
     margin-right: 20px;
+
+    @include mqMd {
+      font-size: 10px;
+      align-items: center;
+    }
 
     &__item {
       transition: all 0.3s;
@@ -102,6 +109,11 @@
         cursor: pointer;
         display: flex;
         font-size: 12px;
+
+        @include mqMd {
+          margin-left: 20px;
+          font-size: 11px;
+        }
       }
 
       &--btn {
@@ -126,7 +138,7 @@
       display: inline-block;
 
       + .l-btn-open__icon {
-        top: 8px;
+        top: 7px;
       }
     }
 

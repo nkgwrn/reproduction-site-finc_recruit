@@ -26,6 +26,7 @@
   <script src="js/luxy.js" charset="utf-8"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.8/js/swiper.min.js"></script>
   <script src="js/jquery.enllax.min.js" charset="utf-8"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
   <!-- <script src="js/jquery.easeScroll.js"></script> -->
   <script src="js/index.js"></script>
 </head>
@@ -70,25 +71,68 @@
 </header>
 <!-- /.l-header -->
  <div class="l-gnav">
-  <div class="l-gnav-left transition10">
-    <div>aaa</div>
+  <div class="l-gnav-left transition101">
+    <div class="l-gnav-left__inner">
+      <div class="l-gnav-thumb">
+        <img
+          src="image/img_gnav_thumb_message1.jpg"
+          alt=""
+          id="main-thumb-01"
+        />
+        <img
+          src="image/img_gnav_thumb_message2.jpg"
+          alt=""
+          id="main-thumb-02"
+        />
+      </div>
+    </div>
   </div>
   <div class="l-gnav-right transition10">
     <nav class="l-gnav-body">
       <ul class="l-gnav-body__list">
-        <li class="l-gnav-body__list--item transition10 delay01">
+        <li
+          class="l-gnav-body__list--item transition10 delay01"
+          data-url-01="image/img_gnav_thumb_message1.jpg"
+          data-url-02="image/img_gnav_thumb_message2.jpg"
+          data-style-01="message01"
+          data-style-02="message02"
+        >
           <a href="">Message</a>
         </li>
-        <li class="l-gnav-body__list--item transition10 delay02">
+        <li
+          class="l-gnav-body__list--item transition10 delay02"
+          data-url-01="image/img_gnav_thumb_jobs1.jpg"
+          data-url-02="image/img_gnav_thumb_jobs2.jpg"
+          data-style-01="jobs01"
+          data-style-02="jobs02"
+        >
           <a href="">Jobs</a>
         </li>
-        <li class="l-gnav-body__list--item transition10 delay03">
+        <li
+          class="l-gnav-body__list--item transition10 delay03"
+          data-url-01="image/img_gnav_thumb_business1.jpg"
+          data-url-02="image/img_gnav_thumb_business2.jpg"
+          data-style-01="business01"
+          data-style-02="business02"
+        >
           <a href="">Business</a>
         </li>
-        <li class="l-gnav-body__list--item transition10 delay04">
+        <li
+          class="l-gnav-body__list--item transition10 delay04"
+          data-url-01="image/img_gnav_thumb_team1.jpg"
+          data-url-02="image/img_gnav_thumb_team2.jpg"
+          data-style-01="team01"
+          data-style-02="team02"
+        >
           <a href="">Team</a>
         </li>
-        <li class="l-gnav-body__list--item transition10 delay05">
+        <li
+          class="l-gnav-body__list--item transition10 delay05"
+          data-url-01="image/img_gnav_thumb_experience1.jpg"
+          data-url-02="image/img_gnav_thumb_experience2.jpg"
+          data-style-01="experience01"
+          data-style-02="experience02"
+        >
           <a href="">Experience</a>
         </li>
         <li class="l-gnav-body__list--item transition10 delay06">

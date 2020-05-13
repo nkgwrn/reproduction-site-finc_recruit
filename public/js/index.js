@@ -23,6 +23,7 @@
 //   });
 // });
 
+//　オープニング
 $(function () {
   setTimeout(function () {
     $(".js-anime-value").addClass("active");
@@ -42,6 +43,7 @@ $(function () {
 });
 
 $(function () {
+  // プログレスバー
   var windowWidth = $(window).width();
   var windowSm = 768;
   if (windowWidth > windowSm) {
@@ -53,6 +55,35 @@ $(function () {
     });
   }
 
+  // サムネイル取得
+  $(".l-gnav-body__list--item").on("mouseover touchend", function () {
+    var dataUrl01 = $(this).attr("data-url-01");
+    var dataUrl02 = $(this).attr("data-url-02");
+    var dataStyle01 = $(this).attr("data-style-01");
+    var dataStyle02 = $(this).attr("data-style-02");
+    $("#main-thumb-01").attr({ src: dataUrl01, class: dataStyle01 });
+    $("#main-thumb-02").attr({ src: dataUrl02, class: dataStyle02 });
+  });
+
+  // //#titleを取得
+  let thumb01 = document.getElementById("main-thumb-01");
+  let thumb02 = document.getElementById("main-thumb-02");
+
+  document.addEventListener("mousemove", (event) => {
+    //X座標(値は適宜調整)
+    var x = Math.round((event.pageX / 100) * 10);
+    //Y座標(値は適宜調整)
+    var y = Math.round((event.pageY / 100) * 10);
+
+    //#titleのX軸・Y軸を設定
+    thumb01.style.left = x + "px";
+    thumb01.style.top = y + "px";
+
+    thumb02.style.left = -x + "px";
+    thumb02.style.top = -y + "px";
+  });
+
+  // セレクトボックス
   $(".js-form-btn").on("click", function () {
     if ($(this).hasClass("is-active")) {
       $(this).removeClass("is-active");
@@ -65,13 +96,17 @@ $(function () {
     }
   });
 
+  // グローバルナビゲーション
   $(".js-menu").on("click", function () {
     $(this).toggleClass("on");
     if ($(".l-gnav").hasClass("on")) {
       //fullnavが開いている時
-      $(".l-gnav").removeClass("on").fadeOut();
+      $(".l-gnav").fadeOut();
       $(".l-btn-open, .l-header__logo--off").addClass("on");
       $(".l-btn-close, .l-header__logo--on").removeClass("on");
+      setTimeout(function () {
+        $(".l-gnav").removeClass("on");
+      }, 500);
     } else {
       //fullnavが閉じている時
       $(".l-gnav").fadeIn();
@@ -83,6 +118,7 @@ $(function () {
     }
   });
 
+  // logo表示/非表示
   var startPos = 0,
     winScrollTop = 0;
   $(window).on("scroll", function () {

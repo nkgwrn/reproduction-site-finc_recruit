@@ -120,7 +120,10 @@
       line-height: 2.2;
 
       @include mqMd {
-        background-image: url(/image/img_recruiting_statement.jpg);
+        background-image: url("/image/sp/img_recruiting_statement.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
         font-size: 12px;
         padding: 55px 32px;
         line-height: 2;
@@ -165,6 +168,10 @@
       background-position: top 43% right 49%;
       background-repeat: no-repeat;
       // }
+
+      @include mqMd {
+        background: none;
+      }
     }
 
     &__gray {

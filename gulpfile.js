@@ -41,7 +41,7 @@ function buildSass(cb) {
 
 function buildEjs(cb) {
   gulp
-    .src(["./src/ejs/pages/*.ejs", "!./src/ejs/**/_*.ejs"])
+    .src(["./src/ejs/pages/*.ejs", "./src/ejs/components/*.ejs"])
     .pipe(ejs())
     .pipe(rename({ extname: ".html" }))
     .pipe(gulp.dest("./public"));
@@ -61,7 +61,7 @@ function watchImage(cb) {
 
 function watchEjs(cb) {
   gulp
-    .watch(["./src/ejs/pages/*.ejs"], buildEjs)
+    .watch(["./src/ejs/pages/*.ejs", "./src/ejs/components/*.ejs"], buildEjs)
     .on("change", browserSync.reload);
   cb();
 }

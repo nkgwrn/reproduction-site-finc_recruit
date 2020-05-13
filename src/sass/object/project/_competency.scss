@@ -6,4 +6,10 @@
       padding-bottom: 18px;
     }
   }
+
+  .c-btn-wrapper {
+    @include mqMd {
+      background-color: #303030;
+    }
+  }
 }
