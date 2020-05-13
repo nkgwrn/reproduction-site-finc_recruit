@@ -1,11 +1,11 @@
 @charset "UTF-8";
-.c-mandatory{
-  color:#fff;
+.c-mandatory {
+  color: #fff;
   @include fontSize(1.2);
   background: $color-alert;
-  padding:.1em .4em;
-  border-radius:5px;
-  @include mqSm{
-   @include fontSize($font-size-sp);
+  padding: 0.1em 0.4em;
+  border-radius: 5px;
+  @include mqMd {
+    @include fontSize($font-size-sp);
   }
 }

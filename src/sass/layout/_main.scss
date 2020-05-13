@@ -2,3 +2,9 @@
 .l-main {
   padding-top: 112px;
 }
+
+.wrapper {
+  @include mqMd {
+    overflow-x: hidden;
+  }
+}

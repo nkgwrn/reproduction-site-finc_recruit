@@ -1,19 +1,19 @@
 @charset "utf-8";
 
 .u-right {
-  text-align: right
+  text-align: right;
 }
 
 .u-center {
-  text-align: center
-}
-
-.u-center{
   text-align: center;
 }
 
-.u-left-sm{
-  @include mqSm{
+.u-center {
+  text-align: center;
+}
+
+.u-left-sm {
+  @include mqMd {
     text-align: left;
   }
 }

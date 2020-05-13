@@ -8,7 +8,7 @@
     margin-top: 150px;
     z-index: 5;
 
-    @include mqSm {
+    @include mqMd {
       margin-top: 40px;
       padding-bottom: 0;
     }
@@ -49,6 +49,13 @@
           background: #fff;
         }
       }
+    }
+  }
+
+  .c-ttl {
+    @include mqMd {
+      width: 215px;
+      margin: 30px auto 0;
     }
   }
 }

@@ -1,0 +1,9 @@
+@charset "UTF-8";
+.p-competency {
+  .p-lead__img {
+    @include mqMd {
+      margin-top: 60px;
+      padding-bottom: 18px;
+    }
+  }
+}

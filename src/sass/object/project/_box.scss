@@ -1,4 +1,11 @@
 @charset 'UTF-8';
 .p-box-center {
   text-align: center;
+
+  .c-panel-body {
+    @include mqMd {
+      line-height: 2;
+      margin-top: 32px;
+    }
+  }
 }

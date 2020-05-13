@@ -8,19 +8,20 @@
   background: url("/image/img_footer.jpg");
   letter-spacing: 0.05em;
 
-  @include mqSm {
+  @include mqMd {
     padding-top: 400px;
     background: url(/image/sp/img_footer.jpg), #222;
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
     font-size: 20px;
+    padding-bottom: 35px;
   }
 
   &-inner {
     display: flex;
 
-    @include mqSm {
+    @include mqMd {
       display: block;
     }
 
@@ -44,7 +45,7 @@
     margin-bottom: 80px;
     position: relative;
 
-    @include mqSm {
+    @include mqMd {
       padding-bottom: 40px;
       margin-bottom: 40px;
     }
@@ -57,31 +58,41 @@
       background-color: #fff;
       bottom: 0;
 
-      @include mqSm {
+      @include mqMd {
         width: 100%;
       }
     }
 
     &__head {
       margin-right: 70px;
+
+      @include mqMd {
+        letter-spacing: 0.1em;
+      }
     }
 
     &__body {
       display: flex;
       font-size: 14px;
 
-      @include mqSm {
+      @include mqMd {
         flex-wrap: wrap;
         font-size: 13px;
       }
 
-      > * {
+      li {
         margin-right: 40px;
 
-        @include mqSm {
-          width: 50%;
+        @include mqMd {
+          width: 30%;
           margin-top: 20px;
           margin-right: 0;
+        }
+
+        &:nth-child(even) {
+          @include mqMd {
+            width: 70%;
+          }
         }
       }
     }
@@ -90,22 +101,23 @@
   &-middle {
     margin-bottom: 105px;
 
-    @include mqSm {
+    @include mqMd {
       margin-bottom: 70px;
     }
 
     &__list {
       display: flex;
 
-      @include mqSm {
+      @include mqMd {
         display: block;
       }
 
       &--item {
         margin-right: 100px;
 
-        @include mqSm {
+        @include mqMd {
           margin-right: 0;
+          letter-spacing: 0.1em;
 
           &:nth-child(2) {
             margin-top: 60px;
@@ -119,10 +131,11 @@
       font-size: 11px;
       margin-top: 30px;
 
-      @include mqSm {
+      @include mqMd {
         display: block;
         font-size: 13px;
         margin-top: 20px;
+        letter-spacing: 0.06em;
       }
 
       &--item {
@@ -133,6 +146,10 @@
     &__element {
       > * {
         margin-bottom: 22px;
+
+        @include mqMd {
+          margin-bottom: 19px;
+        }
       }
     }
   }
@@ -144,22 +161,74 @@
     letter-spacing: 0.08em;
     // font-weight: 700;
 
-    &__left {
+    @include mqMd {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+    }
+
+    &__inner {
       display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+
+      @include mqMd {
+        align-items: baseline;
+      }
 
       &--list {
-        &:last-child {
+        @include mqMd {
+          order: 3;
+          width: 100%;
+          text-align: center;
+          margin-top: 50px;
+        }
+
+        &:nth-child(2) {
           font-size: 14px;
           margin-left: 40px;
           font-weight: 700;
+
+          @include mqMd {
+            order: 1;
+            width: 50%;
+            margin: 0;
+            border-right: 1px solid #fff;
+          }
+        }
+
+        &:last-child {
+          margin-left: auto;
+          margin-right: 0;
+
+          @include mqMd {
+            order: 2;
+            width: 50%;
+            margin: 0;
+          }
         }
       }
 
       .l-sns-list {
         display: flex;
 
+        @include mqMd {
+          font-size: 18px;
+          font-weight: 500;
+          align-items: center;
+        }
+
         &__item {
           margin-right: 20px;
+
+          @include mqMd {
+            margin-right: 30px;
+          }
+
+          .fa-facebook-f {
+            @include mqMd {
+              font-size: 22px;
+            }
+          }
         }
       }
     }

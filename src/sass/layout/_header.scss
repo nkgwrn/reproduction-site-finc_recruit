@@ -12,6 +12,13 @@
   transition: all 0.5s;
   opacity: 0;
 
+  @include mqMd {
+    // position: fixed;
+    width: 100vw;
+    height: 60px;
+    background: #fff;
+  }
+
   &.active {
     transform: translateY(0px);
     opacity: 1;
@@ -22,8 +29,16 @@
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
 
+    @include mqMd {
+      width: 120px;
+    }
+
     &.hide {
       opacity: 0;
+
+      @include mqMd {
+        opacity: 1;
+      }
     }
 
     &--inner {
@@ -57,7 +72,7 @@
     display: flex;
     justify-content: space-between;
 
-    @include mqSm {
+    @include mqMd {
       margin: 20px 15px;
     }
   }

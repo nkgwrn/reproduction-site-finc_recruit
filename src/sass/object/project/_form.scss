@@ -1,9 +1,13 @@
 @charset "UTF-8";
 .p-form {
+  @include mqMd {
+    margin-top: 40px;
+  }
+
   &-inner {
     display: flex;
 
-    @include mqSm {
+    @include mqMd {
       display: block;
     }
 
@@ -22,11 +26,13 @@
       position: relative;
       cursor: pointer;
 
-      @include mqSm {
+      @include mqMd {
         margin: 0 auto;
         width: 260px;
         height: 48px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        padding: 0 20px;
+        font-size: 13px;
       }
 
       &:after {
@@ -54,7 +60,7 @@
       margin: 0;
       font-size: 13px;
 
-      @include mqSm {
+      @include mqMd {
         margin: 0 auto;
       }
     }
@@ -72,14 +78,14 @@
     display: none;
     flex-wrap: wrap;
 
-    @include mqSm {
+    @include mqMd {
       padding: 10px 20px 20px;
     }
 
     &.p-form-list01 {
       width: 900px;
 
-      @include mqSm {
+      @include mqMd {
         width: 260px;
       }
     }
@@ -91,7 +97,7 @@
     &.is-open {
       display: flex;
 
-      @include mqSm {
+      @include mqMd {
         display: block;
       }
     }
@@ -105,7 +111,7 @@
       background-color: #fff;
       position: absolute;
 
-      @include mqSm {
+      @include mqMd {
         width: 258px;
         border: 1px solid #bcbec0;
         border-top: none;
@@ -120,7 +126,7 @@
       color: #000000;
       font-weight: 700;
 
-      @include mqSm {
+      @include mqMd {
         width: 100%;
       }
     }

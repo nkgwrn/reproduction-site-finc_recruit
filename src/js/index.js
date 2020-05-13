@@ -1,27 +1,27 @@
-$(document).ready(function () {
-  const win = $(window);
-  const doc = $(document);
-  const progressBar = $("progress");
-  const progressLabel = $(".progress-label");
-  const setValue = () => win.scrollTop();
-  const setMax = () => doc.height() - win.height();
-  const setPercent = () =>
-    Math.round((win.scrollTop() / (doc.height() - win.height())) * 100);
+// $(document).ready(function () {
+//   const win = $(window);
+//   const doc = $(document);
+//   const progressBar = $("progress");
+//   const progressLabel = $(".progress-label");
+//   const setValue = () => win.scrollTop();
+//   const setMax = () => doc.height() - win.height();
+//   const setPercent = () =>
+//     Math.round((win.scrollTop() / (doc.height() - win.height())) * 100);
 
-  //プログレスバー
-  progressLabel.text(setPercent() + "%");
-  progressBar.attr({ value: setValue(), max: setMax() });
+//   //プログレスバー
+//   progressLabel.text(setPercent() + "%");
+//   progressBar.attr({ value: setValue(), max: setMax() });
 
-  doc.on("scroll", () => {
-    progressLabel.text(setPercent() + "%");
-    progressBar.attr({ value: setValue() });
-  });
+//   doc.on("scroll", () => {
+//     progressLabel.text(setPercent() + "%");
+//     progressBar.attr({ value: setValue() });
+//   });
 
-  win.on("resize", () => {
-    progressLabel.text(setPercent() + "%");
-    progressBar.attr({ value: setValue(), max: setMax() });
-  });
-});
+//   win.on("resize", () => {
+//     progressLabel.text(setPercent() + "%");
+//     progressBar.attr({ value: setValue(), max: setMax() });
+//   });
+// });
 
 $(function () {
   setTimeout(function () {
@@ -42,12 +42,16 @@ $(function () {
 });
 
 $(function () {
-  $.scrolline({
-    direction: "vertical",
-    frontColor: "#ee3281",
-    position: "right",
-    weight: "2",
-  });
+  var windowWidth = $(window).width();
+  var windowSm = 768;
+  if (windowWidth > windowSm) {
+    $.scrolline({
+      direction: "vertical",
+      frontColor: "#ee3281",
+      position: "right",
+      weight: "2",
+    });
+  }
 
   $(".js-form-btn").on("click", function () {
     if ($(this).hasClass("is-active")) {

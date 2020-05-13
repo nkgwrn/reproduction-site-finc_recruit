@@ -1,5 +1,5 @@
 .u-hide-sm {
-  @include mqSm {
+  @include mqMd {
     display: none;
   }
 }

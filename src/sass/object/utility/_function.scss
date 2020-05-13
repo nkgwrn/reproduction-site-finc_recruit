@@ -12,28 +12,28 @@
   }
 }
 
-.u-noneSp{
-  @include mqSm{
+.u-noneSp {
+  @include mqMd {
     display: none;
   }
 }
 
-.u-nonePc{
-  display: none!important;
-  @include mqMd{
-    display: block!important;
+.u-nonePc {
+  display: none !important;
+  @include mqMd {
+    display: block !important;
   }
 }
 
-.u-noneMd{
-  @include mqMd{
+.u-noneMd {
+  @include mqMd {
     display: none;
   }
 }
 
-.u-nonePcMd{
-  display: none!important;
-  @include mqSm{
-    display: block!important;
+.u-nonePcMd {
+  display: none !important;
+  @include mqMd {
+    display: block !important;
   }
 }

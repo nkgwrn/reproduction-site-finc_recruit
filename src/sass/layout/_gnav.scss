@@ -31,6 +31,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  display: none;
 
   &-right {
     align-items: center;
@@ -77,13 +78,14 @@
 }
 
 .l-gnav.on {
+  display: block;
   z-index: 5;
 
   .l-gnav-right {
     opacity: 1;
     width: 340px;
 
-    @include mqSm {
+    @include mqMd {
       width: 100%;
     }
   }
@@ -96,7 +98,7 @@
     opacity: 1;
     width: calc(100% - 340px);
 
-    @include mqSm {
+    @include mqMd {
       width: 0;
     }
   }

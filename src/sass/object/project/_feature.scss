@@ -5,7 +5,7 @@
   &__txt {
     width: 375px;
 
-    @include mqSm {
+    @include mqMd {
       width: 100%;
     }
   }
@@ -36,15 +36,25 @@
       }
     }
   }
+
+  .c-ttl {
+    @include mqMd {
+      width: 200px;
+    }
+  }
 }
 
 .p-feature-team {
+  @include mqMd {
+    padding-top: 20px;
+  }
+
   &__txt {
     margin-right: 0;
     margin-left: auto;
     padding-top: 120px;
 
-    @include mqSm {
+    @include mqMd {
       padding-top: 0px;
     }
   }
@@ -52,5 +62,11 @@
   &__img {
     left: -155px;
     width: 600px;
+  }
+
+  .c-ttl {
+    @include mqMd {
+      width: 130px;
+    }
   }
 }

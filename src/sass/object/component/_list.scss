@@ -2,7 +2,7 @@
 .c-list {
   & > li {
     //margin-bottom: 15px;
-    line-height: 2.0;
+    line-height: 2;
     &:last-child {
       margin-bottom: 0;
     }
@@ -15,7 +15,7 @@
     position: relative;
     padding-left: 10px;
     &:before {
-      content: '';
+      content: "";
       display: inline-block;
       vertical-align: middle;
       width: 4px;
@@ -35,7 +35,7 @@
       margin-bottom: 5px;
     }
   }
-  @include mqSm {
+  @include mqMd {
     @include fontSize($font-size-sp);
     padding-left: 8px;
     & > li {
@@ -44,7 +44,7 @@
       &:before {
         width: 3px;
         height: 3px;
-        top:12px;
+        top: 12px;
       }
     }
   }
@@ -59,25 +59,25 @@
   }
 }
 
-.c-list-decimal{
-  padding-left:2em;
-  @include mqSm{
+.c-list-decimal {
+  padding-left: 2em;
+  @include mqMd {
     padding-left: 15px;
   }
-  & > li{
-    list-style:decimal;
+  & > li {
+    list-style: decimal;
     // > *{
     //   margin-top:1em;
     // }
   }
 }
 
-.c-list-roman{
-  padding-left:1em;
-  @include mqSm{
+.c-list-roman {
+  padding-left: 1em;
+  @include mqMd {
     padding-left: 15px;
   }
-  & > li{
-    list-style:lower-roman;
+  & > li {
+    list-style: lower-roman;
   }
 }

@@ -10,7 +10,7 @@
 
 .u-exLarge {
   @include fontSize(2);
-  @include mqSm {
+  @include mqMd {
     @include fontSize(1.4);
   }
 }

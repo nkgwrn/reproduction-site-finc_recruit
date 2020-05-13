@@ -6,7 +6,7 @@
   border-radius: 5px;
   position: relative;
   z-index: 1;
-  @include mqSm {
+  @include mqMd {
     padding: 15px;
   }
   &:before {
@@ -19,7 +19,7 @@
     left: 15px;
     top: 15px;
     z-index: -1;
-    @include mqSm {
+    @include mqMd {
       left: 5px;
       top: 5px;
     }

@@ -2,7 +2,7 @@
 .c-panel {
   margin-top: 150px;
 
-  @include mqSm {
+  @include mqMd {
     margin-top: 60px;
   }
 
@@ -19,16 +19,23 @@
       display: flex;
       align-items: flex-end;
 
-      @include mqSm {
+      @include mqMd {
         display: block;
         text-align: center;
       }
 
-      &--txt {
-        margin-left: 70px;
-        font-weight: normal;
+      &--ttl {
+        width: 85px;
+        margin: 0 auto;
+      }
 
-        @include mqSm {
+      &--txt {
+        @include mqMd {
+          margin-left: 70px;
+          font-weight: normal;
+        }
+
+        @include mqMd {
           margin: 20px 0 0;
           font-size: 12px;
         }
@@ -41,17 +48,17 @@
     line-height: 2;
     letter-spacing: 0.02em;
 
-    @include mqSm {
+    @include mqMd {
       font-size: 14px;
       text-align: left;
-      margin-top: 40px;
-      line-height: 1.7;
+      margin-top: 25px;
+      line-height: 1.75;
     }
   }
 
   &-sp {
-    @include mqSm {
-      padding: 0 18px;
+    @include mqMd {
+      padding: 0 16px;
     }
   }
 }
@@ -59,8 +66,9 @@
 .p-experience .c-panel-body {
   margin-top: 45px;
 
-  @include mqSm {
+  @include mqMd {
     line-height: 2;
+    margin-top: 25px;
   }
 }
 

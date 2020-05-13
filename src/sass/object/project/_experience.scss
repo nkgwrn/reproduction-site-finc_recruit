@@ -5,7 +5,7 @@
   &__heading {
     width: 525px;
 
-    @include mqSm {
+    @include mqMd {
       width: 100%;
     }
   }
@@ -16,9 +16,9 @@
     padding-top: 65px;
     align-items: flex-start;
 
-    @include mqSm {
+    @include mqMd {
       display: block;
-      padding-top: 40px;
+      padding-top: 32px;
       padding-left: 0;
     }
 
@@ -26,19 +26,23 @@
       width: 309px;
       position: relative;
 
+      @include mqMd {
+        width: 100%;
+      }
+
       &:nth-child(2) {
         margin-top: 150px;
         margin-left: 50px;
 
-        @include mqSm {
-          margin-top: 100px;
+        @include mqMd {
+          margin-top: 90px;
           margin-left: 0;
         }
 
         .p-experience-list__box {
           bottom: -106px;
 
-          @include mqSm {
+          @include mqMd {
             bottom: -98px;
           }
         }
@@ -48,6 +52,10 @@
 
   &-wrapper {
     padding-top: 170px;
+
+    @include mqMd {
+      padding-top: 100px;
+    }
   }
 
   &-list {
@@ -69,10 +77,10 @@
       bottom: -72px;
       background: #fff;
 
-      @include mqSm {
+      @include mqMd {
         width: calc(100% - 20px);
-        padding: 20px;
-        bottom: -75px;
+        padding: 22px 20px;
+        bottom: -72px;
         right: 0;
       }
 
@@ -82,7 +90,7 @@
         color: $color-pink;
         letter-spacing: 0.04em;
 
-        @include mqSm {
+        @include mqMd {
           font-size: 16px;
         }
       }
@@ -92,6 +100,10 @@
         font-weight: 700;
         line-height: 2;
         margin-top: 10px;
+
+        @include mqMd {
+          margin-top: 5px;
+        }
       }
     }
   }
@@ -104,5 +116,16 @@
     position: absolute;
     z-index: -1;
     // transform: translateX(120px);
+
+    @include mqMd {
+      top: 20px;
+      left: 50px;
+    }
+  }
+
+  .c-ttl {
+    @include mqMd {
+      width: 265px;
+    }
   }
 }

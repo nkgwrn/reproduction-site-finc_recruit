@@ -1,15 +1,15 @@
 @charset "UTF-8";
 .c-ttl {
-  font-size: 80px;
-  font-weight: 900;
+  // font-size: 80px;
+  // font-weight: 900;
 
   &__txt {
     letter-spacing: 0.03em;
     font-size: 64px;
     margin-bottom: -10px;
 
-    @include mqSm {
-      font-size: 10vw;
+    @include mqMd {
+      font-size: 9.8vw;
       line-height: 1.5;
     }
   }
@@ -20,9 +20,11 @@
     letter-spacing: 0.1em;
     margin-bottom: -5px;
 
-    @include mqSm {
+    @include mqMd {
+      letter-spacing: 0.05em;
       font-size: 15px;
-      margin-top: 15px;
+      margin-top: 20px;
+      margin-bottom: 0;
     }
   }
 
@@ -32,9 +34,9 @@
     letter-spacing: 0.1em;
     margin-bottom: 45px;
 
-    @include mqSm {
+    @include mqMd {
       font-size: 20px;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
   }
 }
