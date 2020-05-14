@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
   <%- include('../components/_head'); %>
-  <body>
+  <body id="wrapper">
     <!-- <div class="js-start"></div> -->
     <%- include('../components/_header'); %> <%- include('../components/_gnav');
     %>
@@ -127,7 +127,10 @@
                 </p>
               </div>
               <div class="p-value-body__bg luxy-el" data-speed-y="3">
-                <div class="p-value-body__bg--inner luxy-el" data-speed-y="5"></div>
+                <div
+                  class="p-value-body__bg--inner luxy-el"
+                  data-speed-y="5"
+                ></div>
               </div>
               <div class="p-value-body__gray luxy-el" data-speed-y="1"></div>
             </div>
@@ -507,6 +510,10 @@
       <%- include('../components/_footer'); %>
     </div>
 
+    <div class="js-scroll">
+      <div class="js-scroll-inner"></div>
+    </div>
+
     <script charset="utf-8">
       var _ua = (function (u) {
         return {
@@ -538,8 +545,6 @@
       }
     </script>
     <script>
-      $(window).enllax({ type: "foreground" });
-
       var swiper = new Swiper(".swiper-container", {
         spaceBetween: 30,
         speed: 1500,

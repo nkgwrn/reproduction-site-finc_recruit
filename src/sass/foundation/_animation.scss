@@ -131,3 +131,33 @@
     }
   }
 }
+
+.js-scroll {
+  background: rgb(236, 240, 241);
+  bottom: 0px;
+  height: 0;
+  left: auto;
+  opacity: 1;
+  margin: 0px;
+  overflow: hidden;
+  position: fixed;
+  padding: 0px;
+  right: 0px;
+  top: 0px;
+  width: 2px;
+  z-index: 10;
+
+  &-inner {
+    background: $color-pink;
+    bottom: auto;
+    height: 0;
+    left: 0px;
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
+    position: absolute;
+    right: auto;
+    top: 0px;
+    width: 2px;
+  }
+}

@@ -20,18 +20,12 @@
     rel="stylesheet"
   />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
-  <script src="js/scrolline.js"></script>
-  <!-- <script src="js/jquery-inertiaScroll.js"></script> -->
   <script src="js/luxy.js" charset="utf-8"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.8/js/swiper.min.js"></script>
-  <script src="js/jquery.enllax.min.js" charset="utf-8"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-  <!-- <script src="js/jquery.easeScroll.js"></script> -->
   <script src="js/index.js"></script>
 </head>
 
-  <body>
+  <body id="wrapper">
     <!-- <div class="js-start"></div> -->
     <header class="l-header">
   <div class="l-header-inner">
@@ -269,7 +263,10 @@
                 </p>
               </div>
               <div class="p-value-body__bg luxy-el" data-speed-y="3">
-                <div class="p-value-body__bg--inner luxy-el" data-speed-y="5"></div>
+                <div
+                  class="p-value-body__bg--inner luxy-el"
+                  data-speed-y="5"
+                ></div>
               </div>
               <div class="p-value-body__gray luxy-el" data-speed-y="1"></div>
             </div>
@@ -724,6 +721,10 @@
 
     </div>
 
+    <div class="js-scroll">
+      <div class="js-scroll-inner"></div>
+    </div>
+
     <script charset="utf-8">
       var _ua = (function (u) {
         return {
@@ -755,8 +756,6 @@
       }
     </script>
     <script>
-      $(window).enllax({ type: "foreground" });
-
       var swiper = new Swiper(".swiper-container", {
         spaceBetween: 30,
         speed: 1500,

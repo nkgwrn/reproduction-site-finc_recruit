@@ -1,30 +1,43 @@
-// $(document).ready(function () {
-//   const win = $(window);
-//   const doc = $(document);
-//   const progressBar = $("progress");
-//   const progressLabel = $(".progress-label");
-//   const setValue = () => win.scrollTop();
-//   const setMax = () => doc.height() - win.height();
-//   const setPercent = () =>
-//     Math.round((win.scrollTop() / (doc.height() - win.height())) * 100);
+var windowWidth = $(window).width();
+var windowSm = 768;
 
-//   //プログレスバー
-//   progressLabel.text(setPercent() + "%");
-//   progressBar.attr({ value: setValue(), max: setMax() });
+// プログレスバー
+window.onload = function () {
+  document.getElementById("wrapper").onscroll = function () {
+    if (windowWidth > windowSm) {
+      getTheScrollPosition(this);
+    }
+  };
+};
 
-//   doc.on("scroll", () => {
-//     progressLabel.text(setPercent() + "%");
-//     progressBar.attr({ value: setValue() });
-//   });
+function getTheScrollPosition($event) {
+  var outer = $(".js-scroll"),
+    inner = $(".js-scroll-inner"),
+    hWin = $(window).height(),
+    hDoc = $(document).height(),
+    scrollValue = $(window).scrollTop(),
+    hBack,
+    wRef,
+    hFront,
+    scrollineVal;
 
-//   win.on("resize", () => {
-//     progressLabel.text(setPercent() + "%");
-//     progressBar.attr({ value: setValue(), max: setMax() });
-//   });
-// });
+  scrollineVal = (scrollValue / (hDoc - hWin)) * 100;
+  hBack = wRef = hWin;
+  hFront = scrollineVal;
 
-//　オープニング
+  outer.css({
+    height: hBack + "px",
+  });
+  inner.css({
+    height: hFront + "%",
+  });
+  if (scrollineVal >= wRef) {
+    self.params.scrollEnd();
+  }
+}
+
 $(function () {
+  // オープニング
   setTimeout(function () {
     $(".js-anime-value").addClass("active");
   }, 1000);
@@ -40,20 +53,6 @@ $(function () {
   setTimeout(function () {
     $(".js-start").fadeOut(100);
   }, 2500);
-});
-
-$(function () {
-  // プログレスバー
-  var windowWidth = $(window).width();
-  var windowSm = 768;
-  if (windowWidth > windowSm) {
-    $.scrolline({
-      direction: "vertical",
-      frontColor: "#ee3281",
-      position: "right",
-      weight: "2",
-    });
-  }
 
   // サムネイル取得
   var dataStylePrev01 = "message01";
