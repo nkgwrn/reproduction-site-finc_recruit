@@ -107,6 +107,8 @@ $(function () {
 
   // セレクトボックス
   $(".js-form-btn").on("click", function () {
+    $(this).siblings().removeClass("is-active");
+    $(this).siblings().children().removeClass("is-open");
     if ($(this).hasClass("is-active")) {
       $(this).removeClass("is-active");
       $(this).children().removeClass("is-open");
@@ -123,7 +125,7 @@ $(function () {
     $(this).siblings().removeClass("is-active");
     $(".js-form-jobs").text(dataForm01);
     $(this).addClass("is-active");
-    $(".js-form-jobs").addClass("is-active");
+    $(".js-form-jobs").addClass("is-select");
   });
 
   $(".js-form-list02 li").on("click", function () {
@@ -131,7 +133,7 @@ $(function () {
     $(this).siblings().removeClass("is-active");
     $(".js-form-place").text(dataForm02);
     $(this).addClass("is-active");
-    $(".js-form-place").addClass("is-active");
+    $(".js-form-place").addClass("is-select");
   });
 
   // グローバルナビゲーション

@@ -1595,7 +1595,7 @@ li {
   box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
-.p-form-inner__box--jobs.is-active {
+.p-form-inner__box--jobs.is-select {
   font-weight: 700;
   color: #000;
 }
