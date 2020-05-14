@@ -948,8 +948,110 @@ li {
   position: relative;
 }
 
+.l-gnav-left .l-gnav-thumb {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -50%);
+}
+
+.l-gnav-left .l-gnav-thumb > * {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
 .l-gnav-left .l-gnav-thumb img {
   position: absolute;
+  transition: 1s top ease-out, 2s left ease-out;
+  height: auto;
+}
+
+.l-gnav-left .l-gnav-thumb .message01 {
+  left: -30%;
+  bottom: -20%;
+}
+
+.l-gnav-left .l-gnav-thumb .message01 img {
+  width: 20vw;
+}
+
+.l-gnav-left .l-gnav-thumb .message02 {
+  top: -14%;
+  right: -27%;
+}
+
+.l-gnav-left .l-gnav-thumb .message02 img {
+  width: 33vw;
+}
+
+.l-gnav-left .l-gnav-thumb .jobs01 {
+  top: -10%;
+  left: -30%;
+  z-index: 2;
+}
+
+.l-gnav-left .l-gnav-thumb .jobs01 img {
+  width: 30vw;
+}
+
+.l-gnav-left .l-gnav-thumb .jobs02 {
+  right: -20%;
+  width: 110%;
+  z-index: 1;
+}
+
+.l-gnav-left .l-gnav-thumb .business01 {
+  z-index: 2;
+  right: -55%;
+  top: -15%;
+}
+
+.l-gnav-left .l-gnav-thumb .business01 img {
+  width: 25vw;
+}
+
+.l-gnav-left .l-gnav-thumb .business02 {
+  width: 120%;
+  z-index: 1;
+  left: -36%;
+  top: 18%;
+}
+
+.l-gnav-left .l-gnav-thumb .team01 {
+  left: -30%;
+  top: -10%;
+}
+
+.l-gnav-left .l-gnav-thumb .team01 img {
+  width: 32vw;
+}
+
+.l-gnav-left .l-gnav-thumb .team02 {
+  right: -53%;
+  top: 10%;
+}
+
+.l-gnav-left .l-gnav-thumb .team02 img {
+  width: 23vw;
+}
+
+.l-gnav-left .l-gnav-thumb .experience01 {
+  z-index: 2;
+  top: -8%;
+  left: -30%;
+}
+
+.l-gnav-left .l-gnav-thumb .experience01 img {
+  width: 30vw;
+}
+
+.l-gnav-left .l-gnav-thumb .experience02 {
+  width: 120%;
+  right: -15%;
+  bottom: -20%;
 }
 
 .l-gnav.on {

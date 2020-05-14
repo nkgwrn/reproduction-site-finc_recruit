@@ -98,8 +98,106 @@
     }
 
     .l-gnav-thumb {
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-30%, -50%);
+
+      > * {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+
       img {
         position: absolute;
+        transition: 1s top ease-out, 2s left ease-out;
+        height: auto;
+      }
+
+      .message01 {
+        left: -30%;
+        bottom: -20%;
+
+        img {
+          width: 20vw;
+        }
+      }
+
+      .message02 {
+        top: -14%;
+        right: -27%;
+
+        img {
+          width: 33vw;
+        }
+      }
+
+      .jobs01 {
+        top: -10%;
+        left: -30%;
+        z-index: 2;
+        img {
+          width: 30vw;
+        }
+      }
+
+      .jobs02 {
+        right: -20%;
+        width: 110%;
+        z-index: 1;
+      }
+
+      .business01 {
+        z-index: 2;
+        right: -55%;
+        top: -15%;
+
+        img {
+          width: 25vw;
+        }
+      }
+
+      .business02 {
+        width: 120%;
+        z-index: 1;
+        left: -36%;
+        top: 18%;
+      }
+
+      .team01 {
+        left: -30%;
+        top: -10%;
+
+        img {
+          width: 32vw;
+        }
+      }
+
+      .team02 {
+        right: -53%;
+        top: 10%;
+        img {
+          width: 23vw;
+        }
+      }
+
+      .experience01 {
+        z-index: 2;
+        top: -8%;
+        left: -30%;
+
+        img {
+          width: 30vw;
+        }
+      }
+
+      .experience02 {
+        width: 120%;
+        right: -15%;
+        bottom: -20%;
       }
     }
   }
