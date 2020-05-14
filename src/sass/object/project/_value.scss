@@ -202,13 +202,25 @@
     height: 100%;
     margin-top: -70px;
     margin-left: -0.4%;
-    overflow: hidden;
+    // overflow: hidden;
 
     @include mqMd {
       width: 22%;
       height: 100vw;
       margin-top: -30px;
       margin-left: -1%;
+      // overflow: hidden;
+    }
+
+    &__wrapper {
+      height: 100%;
+      margin-top: -112px;
+      position: relative;
+
+      @include mqMd {
+        margin-top: 0;
+        overflow: hidden;
+      }
     }
 
     &__cover {
@@ -229,6 +241,7 @@
       left: 0;
       width: 66%;
       height: 100%;
+      overflow: hidden;
 
       @include mqMd {
         width: 100%;

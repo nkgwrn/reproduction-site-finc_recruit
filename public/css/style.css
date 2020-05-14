@@ -360,23 +360,24 @@ li {
 
 .js-anime-value {
   transform: translateY(-100%);
-  transition: all 1s cubic-bezier(0.6, 0.21, 0.13, 1);
+  transition: all 2s cubic-bezier(0.6, 0.21, 0.13, 1);
 }
 
 @media only screen and (max-width: 768px) {
   .js-anime-value {
     opacity: 0;
     transform: translateY(-50px);
-    transition: all 1s cubic-bezier(0.6, 0.21, 0.13, 1);
+    transition: all 1s ease-out;
   }
 }
 
 .js-anime-value.active {
-  transform: translateY(0);
+  transform: translateY(112px);
 }
 
 @media only screen and (max-width: 768px) {
   .js-anime-value.active {
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -613,6 +614,7 @@ li {
 .l-footer-inner__head {
   color: #fff;
   font-weight: 700;
+  letter-spacing: 0.1em;
 }
 
 .l-footer-top {
@@ -656,6 +658,7 @@ li {
 .l-footer-top__body {
   display: flex;
   font-size: 14px;
+  letter-spacing: 0.1em;
 }
 
 @media only screen and (max-width: 768px) {
@@ -704,7 +707,7 @@ li {
 }
 
 .l-footer-middle__list--item {
-  margin-right: 100px;
+  margin-right: 95px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -720,7 +723,7 @@ li {
 .l-footer-middle__sublist {
   display: flex;
   font-size: 11px;
-  margin-top: 30px;
+  margin-top: 33px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1487,7 +1490,7 @@ li {
 }
 
 .p-form-inner__box.is-active {
-  box-shadow: 2px 0px 5px #ccc;
+  box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
 .p-form-inner__btn {
@@ -1512,6 +1515,7 @@ li {
   z-index: 3;
   display: none;
   flex-wrap: wrap;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 @media only screen and (max-width: 768px) {
@@ -1670,7 +1674,7 @@ li {
 
 .p-mission-side {
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 
 .p-mission-side__item {
@@ -1925,7 +1929,6 @@ li {
   height: 100%;
   margin-top: -70px;
   margin-left: -0.4%;
-  overflow: hidden;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1934,6 +1937,19 @@ li {
     height: 100vw;
     margin-top: -30px;
     margin-left: -1%;
+  }
+}
+
+.p-value-side__wrapper {
+  height: 100%;
+  margin-top: -112px;
+  position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-value-side__wrapper {
+    margin-top: 0;
+    overflow: hidden;
   }
 }
 
@@ -1957,6 +1973,7 @@ li {
   left: 0;
   width: 66%;
   height: 100%;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 768px) {

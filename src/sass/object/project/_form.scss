@@ -52,7 +52,7 @@
       }
 
       &.is-active {
-        box-shadow: 2px 0px 5px #ccc;
+        box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.2);
       }
     }
 
@@ -77,6 +77,7 @@
     z-index: 3;
     display: none;
     flex-wrap: wrap;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
     @include mqMd {
       padding: 10px 20px 20px;

@@ -113,18 +113,20 @@
 
 .js-anime-value {
   transform: translateY(-100%);
-  transition: all 1s cubic-bezier(0.6, 0.21, 0.13, 1);
+  // transition: all 1s cubic-bezier(0.6, 0.21, 0.13, 1);
+  transition: all 2s cubic-bezier(0.6, 0.21, 0.13, 1);
 
   @include mqMd {
     opacity: 0;
     transform: translateY(-50px);
-    transition: all 1s cubic-bezier(0.6, 0.21, 0.13, 1);
+    transition: all 1s ease-out;
   }
 
   &.active {
-    transform: translateY(0);
+    transform: translateY(112px);
 
     @include mqMd {
+      transform: translateY(0);
       opacity: 1;
     }
   }
