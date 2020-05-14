@@ -54,6 +54,13 @@
       &.is-active {
         box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.2);
       }
+
+      &--jobs {
+        &.is-active {
+          font-weight: 700;
+          color: #000;
+        }
+      }
     }
 
     &__btn {
@@ -129,6 +136,10 @@
 
       @include mqMd {
         width: 100%;
+      }
+
+      &.is-active {
+        color: $color-pink;
       }
     }
   }

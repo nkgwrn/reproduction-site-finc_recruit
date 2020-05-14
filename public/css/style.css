@@ -1595,6 +1595,11 @@ li {
   box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
+.p-form-inner__box--jobs.is-active {
+  font-weight: 700;
+  color: #000;
+}
+
 .p-form-inner__btn {
   margin: 0;
   font-size: 13px;
@@ -1681,6 +1686,10 @@ li {
   .p-form-list__item {
     width: 100%;
   }
+}
+
+.p-form-list__item.is-active {
+  color: #ee3281;
 }
 
 .p-jobs {

@@ -23,28 +23,6 @@
 //   });
 // });
 
-var _ua = (function (u) {
-  return {
-    Tablet:
-      (u.indexOf("windows") != -1 &&
-        u.indexOf("touch") != -1 &&
-        u.indexOf("tablet pc") == -1) ||
-      u.indexOf("ipad") != -1 ||
-      (u.indexOf("android") != -1 && u.indexOf("mobile") == -1) ||
-      (u.indexOf("firefox") != -1 && u.indexOf("tablet") != -1) ||
-      u.indexOf("kindle") != -1 ||
-      u.indexOf("silk") != -1 ||
-      u.indexOf("playbook") != -1,
-    Mobile:
-      (u.indexOf("windows") != -1 && u.indexOf("phone") != -1) ||
-      u.indexOf("iphone") != -1 ||
-      u.indexOf("ipod") != -1 ||
-      (u.indexOf("android") != -1 && u.indexOf("mobile") != -1) ||
-      (u.indexOf("firefox") != -1 && u.indexOf("mobile") != -1) ||
-      u.indexOf("blackberry") != -1,
-  };
-})(window.navigator.userAgent.toLowerCase());
-
 //　オープニング
 $(function () {
   setTimeout(function () {
@@ -140,13 +118,29 @@ $(function () {
     }
   });
 
+  $(".js-form-list01 li").on("click", function () {
+    var dataForm01 = $(this).attr("data-form-01");
+    $(this).siblings().removeClass("is-active");
+    $(".js-form-jobs").text(dataForm01);
+    $(this).addClass("is-active");
+    $(".js-form-jobs").addClass("is-active");
+  });
+
+  $(".js-form-list02 li").on("click", function () {
+    var dataForm02 = $(this).attr("data-form-02");
+    $(this).siblings().removeClass("is-active");
+    $(".js-form-place").text(dataForm02);
+    $(this).addClass("is-active");
+    $(".js-form-place").addClass("is-active");
+  });
+
   // グローバルナビゲーション
   $(".js-menu").on("click", function () {
     $(this).toggleClass("on");
     if ($(".l-gnav").hasClass("on")) {
       //fullnavが開いている時
       $(".l-gnav").fadeOut();
-      if (!_ua.Mobile && !_ua.Tablet) {
+      if (windowWidth > windowSm) {
         $(".l-btn-open, .l-header__logo--off").addClass("on");
         $(".l-btn-close, .l-header__logo--on").removeClass("on");
       }
@@ -159,7 +153,7 @@ $(function () {
       setTimeout(function () {
         $(".l-gnav").addClass("on");
       }, 200);
-      if (!_ua.Mobile && !_ua.Tablet) {
+      if (windowWidth > windowSm) {
         $(".l-btn-close, .l-header__logo--on").addClass("on");
         $(".l-btn-open, .l-header__logo--off").removeClass("on");
       }
