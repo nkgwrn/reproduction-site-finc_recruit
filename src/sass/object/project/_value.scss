@@ -120,7 +120,7 @@
       line-height: 2.2;
 
       @include mqMd {
-        background-image: url("/image/sp/img_recruiting_statement.jpg");
+        background-image: url("../image/sp/img_recruiting_statement.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -169,15 +169,15 @@
 
       &--inner {
         width: 120%;
-    height: 120%;
-    position: absolute;
-    top: -20%;
-    left: -10%;
-    z-index: 1;
-    background-image: url(/image/img_recruiting_statement.jpg);
-    background-size: 112%;
-    background-position: top 0 center;
-    background-repeat: no-repeat;
+        height: 120%;
+        position: absolute;
+        top: -20%;
+        left: -10%;
+        z-index: 1;
+        background-image: url("../image/img_recruiting_statement.jpg");
+        background-size: 112%;
+        background-position: top 0 center;
+        background-repeat: no-repeat;
       }
     }
 

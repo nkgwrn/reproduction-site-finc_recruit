@@ -5,12 +5,12 @@
 .l-footer {
   font-size: 16px;
   padding: 265px 0 55px;
-  background: url("/image/img_footer.jpg");
+  background: url("../image/img_footer.jpg");
   letter-spacing: 0.05em;
 
   @include mqMd {
     padding-top: 400px;
-    background: url(/image/sp/img_footer.jpg), #222;
+    background: url("../image/sp/img_footer.jpg"), #222;
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
