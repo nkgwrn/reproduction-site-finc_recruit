@@ -1,17 +1,5 @@
-var windowWidth = $(window).width();
-var windowSm = 768;
-
-// プログレスバー
+// オープニング
 window.addEventListener("load", function () {
-  document.getElementById("wrapper").onscroll = function () {
-    if (windowWidth > windowSm) {
-      getTheScrollPosition(this);
-    }
-  };
-});
-
-window.addEventListener("load", function () {
-  // オープニング
   setTimeout(function () {
     $(".js-anime-value").addClass("active");
   }, 1000);
@@ -27,6 +15,18 @@ window.addEventListener("load", function () {
   setTimeout(function () {
     $(".js-start").fadeOut(100);
   }, 2500);
+});
+
+var windowWidth = $(window).width();
+var windowSm = 768;
+
+// プログレスバー
+window.addEventListener("load", function () {
+  document.getElementById("wrapper").onscroll = function () {
+    if (windowWidth > windowSm) {
+      getTheScrollPosition(this);
+    }
+  };
 });
 
 function getTheScrollPosition($event) {
