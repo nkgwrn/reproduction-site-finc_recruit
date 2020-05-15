@@ -2,13 +2,32 @@ var windowWidth = $(window).width();
 var windowSm = 768;
 
 // プログレスバー
-window.onload = function () {
+window.addEventListener("load", function () {
   document.getElementById("wrapper").onscroll = function () {
     if (windowWidth > windowSm) {
       getTheScrollPosition(this);
     }
   };
-};
+});
+
+window.addEventListener("load", function () {
+  // オープニング
+  setTimeout(function () {
+    $(".js-anime-value").addClass("active");
+  }, 1000);
+  setTimeout(function () {
+    $(".l-header").addClass("active");
+  }, 1800);
+  setTimeout(function () {
+    $(".p-value-head").addClass("active");
+  }, 1800);
+  setTimeout(function () {
+    $(".p-value-body").addClass("active");
+  }, 2300);
+  setTimeout(function () {
+    $(".js-start").fadeOut(100);
+  }, 2500);
+});
 
 function getTheScrollPosition($event) {
   var outer = $(".js-scroll"),
@@ -37,23 +56,6 @@ function getTheScrollPosition($event) {
 }
 
 $(function () {
-  // オープニング
-  setTimeout(function () {
-    $(".js-anime-value").addClass("active");
-  }, 1000);
-  setTimeout(function () {
-    $(".l-header").addClass("active");
-  }, 1800);
-  setTimeout(function () {
-    $(".p-value-head").addClass("active");
-  }, 1800);
-  setTimeout(function () {
-    $(".p-value-body").addClass("active");
-  }, 2300);
-  setTimeout(function () {
-    $(".js-start").fadeOut(100);
-  }, 2500);
-
   // サムネイル取得
   var dataStylePrev01 = "message01";
   var dataStylePrev02 = "message02";
