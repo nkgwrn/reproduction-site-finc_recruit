@@ -29,7 +29,7 @@ body {
   -ms-overflow-style: none;
   overflow-x: hidden;
   overscroll-behavior: none;
-  // opacity: 0;
+  scrollbar-width: none;
 }
 
 body::-webkit-scrollbar {
