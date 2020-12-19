@@ -7,7 +7,7 @@
   "scripts": {
     "build": "gulp",
     "start": "gulp watch",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist/html"
   },
   "keywords": [],
   "author": "",
