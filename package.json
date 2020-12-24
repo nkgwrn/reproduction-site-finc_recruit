@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://nkgwrn.github.io/reproduction-site-finc_recruit/",
+  "homepage": "https://nrwgkn.github.io/reproduction-site-finc_recruit/",
   "scripts": {
     "build": "gulp",
     "start": "gulp watch",
